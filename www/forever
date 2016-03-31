@@ -1,6 +1,10 @@
 #!/bin/bash
 # chkconfig: 345 88 08
 # description: Forever for Node.js
+#chmod 755 /etc/init.d/forever
+#chkconfig --add forever
+#chkconfig forever on
+#reboot 
 
 WORKDIR=/home/node/WSFrameWork.nodejs/cancer/www/cancer_www
 DEAMON=/home/node/WSFrameWork.nodejs/cancer/www/cancer_www/bin/www
