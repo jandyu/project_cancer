@@ -1,0 +1,136 @@
+{>layout_normal /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+    </style>
+    <script>
+        login = function () {
+            $("form").submit();
+        }
+    </script>
+{/pagescript}
+{<title}
+    基本资料
+{/title}
+
+
+{<titleview}
+    <div class="row" style="margin-top: 80px;">
+
+    </div>
+
+{/titleview}
+{<body}
+    <div class="row" style="background-color: rgb(250,251,252);margin-top: -120px;">
+        <div class="col-sm-2" style="padding-top:20px;background-color: rgb(250,251,252)">
+
+            <div class="row text-center" style="height:100px;border-bottom: 0px;">
+                <img src="{user.photo}" style="width:100px">
+            </div>
+            <div class="row">
+                {user.fullname}
+            </div>
+            <div class="row">
+                <a href="/users/center"><h5>基本资料</h5></a>
+            </div>
+            <div class="row">
+                <a href="/users/profile"><h5>个人情况</h5></a>
+            </div>
+
+        </div>
+        <div class="col-sm-10" style="padding-top:20px;background-color: white">
+            <div class="row" style="border-bottom: 0px solid white;height:auto">
+                <h4>基本资料</h4>
+
+                <form action="/users/center" method="post" class="form-horizontal">
+                    {#user}
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">帐号</label>
+
+                            <div class="col-sm-2">
+                                <p class="form-control-static">{account}</p>
+                            </div>
+                            <label class="col-sm-2 control-label">姓名</label>
+
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" name="fullname" placeholder="姓名"
+                                       value="{fullname}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">生日</label>
+
+                            <div class="col-sm-2">
+                                <input type="date" class="form-control" name="birthday" placeholder="生日"
+                                       value="{birthday}">
+                            </div>
+
+                            <label class="col-sm-2 control-label">性别</label>
+
+                            <div class="col-sm-2">
+                                <select class="form-control" name="sex" >
+                                    <option value="M" {@eq key=sex value="M"}selected{/eq}>男</option>
+                                    <option value="F" {@eq key=sex value="F"}selected{/eq}>女</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">电话</label>
+
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" name="tel" placeholder="电话" value="{tel}">
+                            </div>
+                            <label class="col-sm-2 control-label">Email</label>
+
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" name="email" placeholder="email"
+                                       value="{email}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-offset-2 control-label">{info}</label>
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button type="submit" class="col-sm-6 btn btn-primary">保 存</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            &nbsp;
+                        </div>
+                    {/user}
+
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <h4>个人报告</h4>
+            </div>
+            <hr>
+            <div class="row">
+                <h4>登录历史</h4>
+                {#loghistory}
+                    <div class="row">
+                        <div class="col-sm-3 col-sm-offset-2">{time}</div>
+                        <div class="col-sm-3">{ip}</div>
+                    </div>
+                {/loghistory}
+            </div>
+            <div class="row" >&nbsp;</div>
+        </div>
+    </div>
+
+
+
+{/body}
+
+
+

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "胃癌",
+    "categoryID": "0101"
+  },
+  {
+    "title": "肺癌",
+    "categoryID": "0102"
+  },
+  {
+    "title": "乳腺癌",
+    "categoryID": "0103"
+  },
+  {
+    "title": "淋巴癌",
+    "categoryID": "0104"
+  },
+  {
+    "title": "骨髓癌",
+    "categoryID": "0105"
+  }
+]

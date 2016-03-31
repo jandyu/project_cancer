@@ -1,0 +1,50 @@
+{>layout /}
+
+{<pagescript}
+    <script>
+        login = function(){
+            $("form").submit();
+        }
+    </script>
+{/pagescript}
+{<title}
+    login
+{/title}
+
+{<body}
+
+
+
+    <div style="clear: both"></div>
+
+    <div class="row" style="height:649px;background: url(/images/login/background.jpg) 50% 0% no-repeat;color:white">
+        <div class="col-sm-4 col-sm-offset-7" style="padding-top: 50px">
+            <form action="/users/login" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">登录帐号</label>
+                    <input type="email" class="form-control" id="account" name="account" placeholder="帐号/手机/Email地址">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密码</label>
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label style="color:red;font-weight: 200">&nbsp;{errinfo}</label>
+                </div>
+                <input type="hidden" name ="url" value="{url}">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 保留我的登录状态
+                    </label>
+                    <a style="margin-left:100px; ;color:white" href="/users/register">注册新用户</a>
+                </div>
+                <button type="button" onclick="login()" class="btn btn-default" style="margin-top:10px;width:120px">登 录</button>
+            </form>
+        </div>
+    </div>
+
+
+{/body}
+
+
+

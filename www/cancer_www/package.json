@@ -1,0 +1,24 @@
+{
+  "name": "cancer-website",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "static-favicon": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "adaro":"~1.0.1",
+    "promise":"~7.1.1",
+    "mongodb": "~1.4.7",
+    "underscore":"*",
+    "log4js":"*",
+    "uuid":"~2.0.1",
+    "sha1":"*",
+    "express-session":"*",
+    "upload-file":"*"
+  }
+}

@@ -1,0 +1,36 @@
+<div class="row">
+
+</div>
+
+<div class="row topbar visible-xs">
+    <div class="col-xs-2" style="padding-left:0px;padding-top: 50px">
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                <span class="glyphicon glyphicon-th-list"></span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                {#layout.menu}
+                    <li><a href="{link}">{title}</a></li>
+                {/layout.menu}
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-10 logo">
+        <img src="{layout.logo.img}" style="width:100%;max-width:280px">
+    </div>
+
+</div>
+
+<div class="row topbar  hidden-xs">
+
+    <div class="col-sm-12 menu">
+        <ul class="nav nav-tabs" style="margin-top: 55px;">
+            <li style="margin-top: -35px;padding: 0px"><img src="{layout.logo.img}"></li>
+            {#layout.menu}
+                <li style="margin-left: 5px;"><a href="{link}">{title}</a></li>
+            {/layout.menu}
+        </ul>
+    </div>
+</div>

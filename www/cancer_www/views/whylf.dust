@@ -1,0 +1,105 @@
+{>layout /}
+
+{<pagescript}
+
+{/pagescript}
+{<title}
+    Why lifestar
+{/title}
+
+{<body}
+
+
+
+    <div style="clear: both"></div>
+
+    <div class="row" style="background: url(/images/home/methodback.png) repeat-x">
+        <div class="col-sm-12 hidden-xs" style="height:579px;background: url(/images/why/why1.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/why/why1_xs.jpg" style="width:100%">
+        </div>
+    </div>
+    <div class="row" style="background: url(/images/home/methodback.png) repeat-x">
+        <div class="col-sm-12 hidden-xs" style="height:210px;background: url(/images/why/method.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/why/method_xs.jpg" style="width:100%">
+        </div>
+    </div>
+    <div class="row" style="background: url(/images/home/methodback.png) repeat-x">
+        <div class="col-sm-12 hidden-xs" style="height:402px;background: url(/images/why/four.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/why/four_xs.jpg" style="width:100%">
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-bottom:20px;background-color: white">
+        <div class="hidden-sm hidden-xs" style="width:1040px;margin-left: auto;margin-right: auto">
+            <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method1.png)">
+                星生命的潜在治疗方案可以帮助您更加了解您的病痛. 我们会了解您的病情从而给您一个潜在的私人定制的治疗方案。
+            </div>
+            <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method2.png)">
+                星生命的潜在治疗方案可以帮助您了解哪些治疗方案在国内或者国外.
+                星生命会员可以得到我们给予的所有癌症国内外治疗方案.
+            </div>
+            <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method3.png)">
+                星生命的论坛可以帮助您了解您的病痛和治疗方案.
+                星生命在线论坛可以让所有抗癌者本人或加入一起共同抗癌，共同用治愈案例来相互鼓励。星生命在线论坛是完全免费的。
+                在星生命论坛您也可以使用第二已经治疗方案.
+            </div>
+            <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method4.png)">
+                星生命的潜在治疗方案可以帮助您了解哪些治疗方案.  星生命方案决定工具可以帮助您对比所哟治疗方案或者和专家在线进行沟通!
+            </div>
+        </div>
+        <div class="visible-xs-block visible-xs" style="width:260px;margin-left: auto;margin-right: auto">
+            <div class="row">
+                <div class="col-xs-6" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method1.png)">
+                    星生命的潜在治疗方案可以帮助您更加了解您的病痛. 我们会了解您的病情从而给您一个潜在的私人定制的治疗方案。
+                </div>
+                <div class="col-xs-6" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method2.png)">
+                    星生命的潜在治疗方案可以帮助您了解哪些治疗方案在国内或者国外.
+                    星生命会员可以得到我们给予的所有癌症国内外治疗方案.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method3.png)">
+                    星生命的论坛可以帮助您了解您的病痛和治疗方案.
+                    星生命在线论坛可以让所有抗癌者本人或加入一起共同抗癌，共同用治愈案例来相互鼓励。星生命在线论坛是完全免费的。
+                    在星生命论坛您也可以使用第二已经治疗方案.
+                </div>
+                <div class="col-xs-6" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method4.png)">
+                    星生命的潜在治疗方案可以帮助您了解哪些治疗方案.  星生命方案决定工具可以帮助您对比所哟治疗方案或者和专家在线进行沟通!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background: url(/images/home/methodback.png) repeat-x">
+        <div class="col-sm-12" style="height:70px;background: url(/images/why/videot.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="row text-center hidden-xs">
+        <video src="http://images.apple.com/media/cn/iphone-6s/2015/dhs3b549_75f9_422a_9470_4a09e709b350/tv-spots/hey-siri/iphone6s-hey-siri-cn-20151203_1920x1080l.mp4"
+               controls="controls" loop="loop" proload="auto" width="900" height="480"></video>
+
+    </div>
+    <div class="row text-center visible-xs">
+        <video src="http://images.apple.com/media/cn/iphone-6s/2015/dhs3b549_75f9_422a_9470_4a09e709b350/tv-spots/hey-siri/iphone6s-hey-siri-cn-20151203_1920x1080l.mp4"
+               controls="controls" loop="loop" proload="auto" width="100%" height="320"></video>
+
+    </div>
+
+    <div class="row text-center"><a href="users/profile"><img src="/images/home/float_button.png"></a></div>
+
+{/body}
+
+
+

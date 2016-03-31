@@ -1,0 +1,52 @@
+{>layout_normal /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+    </style>
+    <script>
+        login = function () {
+            $("form").submit();
+        }
+    </script>
+{/pagescript}
+{<title}
+    星生命网站 - 留言板使用规则
+{/title}
+
+
+{<titleview}
+    <div class="row text-center" style="margin-top: 80px;">
+        <h4>星生命网站 - 留言板使用规则
+        </h4>
+    </div>
+
+{/titleview}
+{<body}
+    <div class="row" style="background-color: rgb(250,251,252);margin-top: -100px;text-indent:25px;padding: 25px;">
+
+        <p>在您使用本留言板前，我们希望您了解并同意遵守以下使用规则：</p>
+        <p></p>
+        <p>1．	您作为用户的注册和使用本网站（包括选择用户名和昵称）应遵守中华人民共和国法律法规，并符合网络道德。</p>
+        <p>2．	星生命网站管理员将尽力保证留言板上发布的内容遵守中华人民共和国法律法规、并符合网络道德。对不合适的提问和回答，我们会采取删除、编辑或关闭内容的行动。但基于网站操作和管理的原因，我们删除或关闭内容的行动可能会有所延迟。敬请理解。</p>
+        <p>3．	和其他公共留言板一样，本留言板中的内容是用户个人意见的表达，并不代表星生命的立场和态度，也不代表星生命认同这些信息和观点的真实性。星生命不对这些内容负责。请谨慎参考。</p>
+        <p>4．	您不会发布任何带有威胁、淫秽、漫骂、非法、歧视、或其他侵害他人权益的信息或言论。</p>
+        <p>5．	我们保留编辑、删除和关闭用户所发布的内容的权利。</p>
+        <p>6．	本留言板使用规则是用户注册协议和网站免责声明中的一部分，和用户注册协议和网站免责声明具有相同效力。</p>
+        <p></p>
+        <p>我已经阅读上述规则，并同意遵守上述规则。</p>
+
+
+    </div>
+    <div class="row">&nbsp;</div>
+
+
+{/body}
+
+
+

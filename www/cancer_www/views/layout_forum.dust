@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>{+title }星生命{/title}</title>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/buttons/buttons.css"/>
+
+    <link type="text/css" rel="stylesheet" href="/bootstrap/switch/css/bootstrap3/bootstrap-switch.min.css"/>
+
+    <link type="text/css" rel="stylesheet" href="/stylesheets/animate.css"/>
+
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css"/>
+
+    <script src="/javascripts/jquery.min.js"></script>
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/bootstrap/switch/js/bootstrap-switch.min.js"></script>
+
+    <script src="/javascripts/touch.min.js"></script>
+    <script src="/javascripts/mapp.js"></script>
+
+    {+pagescript/}
+</head>
+
+
+<body>
+<!--<div class="container-fluid">-->
+<div class="container">
+    {>topbar /}
+
+    <div class="row" style=" background: url(/images/forum/background.png) 50% 0% repeat-y;">
+
+        <div class="col-sm-12" style="height:230px;background: url(/images//forum/layout.jpg) 50% 0% no-repeat;">
+            {+titleview}  {/titleview}
+        </div>
+
+        <div class="col-sm-12" style="padding:50px;">
+            {+body /}
+        </div>
+    </div>
+    {>pagefoot /}
+</div>
+</body>
+</html>

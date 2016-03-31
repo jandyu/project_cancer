@@ -1,0 +1,45 @@
+<div style="clear: both"></div>
+
+<!--
+<div class="row" style="padding:30px 30px; background: url(/images/home/footerback.jpg) 50% 0% no-repeat;">
+    <div class="row" style="max-width:900px;margin-left: auto;margin-right: auto">
+        {#layout.footer}
+            <div class="col-sm-4">
+                <div class="row" style="height:40px;line-height:40px;font-weight:800;border-bottom: 1px solid gray">
+                    {title}
+                </div>
+                {#link}
+                    <div class="row">
+                        {title}
+                    </div>
+                {/link}
+            </div>
+        {/layout.footer}
+
+    </div>
+</div>-->
+
+<div class="row" style="padding:30px;border-top:2px solid rgb(210,228,241)">
+
+    <div class="row text-center" style=" max-width:800px;margin-left: auto;margin-right: auto;">
+
+        <p class="visible-lg-block">
+        {#layout.policy.link}
+           <a style="margin: 0px 10px;" href="{link}" target="_blank"> {title} </a>
+        {/layout.policy.link}
+        </p>
+        <p class="hidden-lg">
+            {#layout.policy.link}
+                <a style="margin: 0px 10px;"  href="{link}" target="_blank"> {title} </a><br/>
+            {/layout.policy.link}
+        </p>
+        <p>
+            {layout.policy.desc}
+        </p>
+
+        <p>
+            <img src="{layout.logo.img}">
+        </p>
+    </div>
+
+</div>

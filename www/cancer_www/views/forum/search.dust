@@ -1,0 +1,107 @@
+{>layout_forum /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+    </style>
+    <script>
+        login = function () {
+            $("form").submit();
+        }
+    </script>
+{/pagescript}
+{<title}
+    搜索-{keyword}
+{/title}
+
+
+{<titleview}
+
+
+{/titleview}
+{<body}
+
+
+    <div class="row" style="text-indent:25px;  margin-top:-150px;">
+        <div class="row" style="height:45px;line-height:45px;color:white;font-size:14pt;margin-bottom: 3px">
+            <div class="col-sm-12" style="background:gray"><a href="/forum/index" style="color:white;">&laquo; 论坛首页 </a> - 搜索 "{keyword}"
+            </div>
+        </div>
+        <div class="col-sm-9" style="background-color: white">
+            <div class="row">
+
+                    <h4 style="border-bottom: 0px solid rgb(204,205,206)">"{keyword}" 搜索到 {articles.length} 个结果:
+                    </h4>
+
+
+            </div>
+
+            <div class="row">
+                <table class="table table-condensed ">
+
+                    {#articles}
+                        <tr style="height:50px;line-height: 25px;">
+                            <td><img src="{user.photo}" style="width:50px;border-radius: 25px"></td>
+                            <td style="height:50px;line-height: 25px;"><a href="/forum/article/{_id}">{title}</a></td>
+                            <td style="height:50px;line-height: 25px;color:gray;font-size: 9pt">
+                                回复&nbsp;:&nbsp;{replycnt}</td>
+                            <td style="height:50px;line-height: 25px;color:gray;font-size: 9pt">最后回复:{lastreply}</td>
+                        </tr>
+                    {/articles}
+
+                    <tr>
+                        <td colspan="4">
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <ul class="pagination" style="text-indent:0px;font-size: 10pt;">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">下一页</a></li>
+                        <li><a href="#">末页</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-3 hidden-xs" style="padding-left:10px;padding-right: 0px">
+            <div class="row" style=" background-color: white">
+                {#forum}
+                    <div class="row text-center" style="padding: 35px;">
+                        <ul class="nav nav-pills nav-stacked"
+                            style="border: 1px solid rgb(210,228,241);border-radius: 5px;box-shadow: 5px 5px 3px rgba(204,204,204,0.5);">
+                            <li role="presentation" style="background-color: rgb(226,250,250);height:35px;line-height: 35px;">
+                                {category}
+                            </li>
+                            {#topic}
+                                <li role="presentation"><a href="/forum/category/{_id}">{title}</a></li>
+                            {/topic}
+
+                        </ul>
+
+                    </div>
+
+                {/forum}
+            </div>
+
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+
+
+
+{/body}
+
+
+

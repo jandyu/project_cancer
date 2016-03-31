@@ -1,0 +1,46 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+
+    {
+      "type": "clustered",
+      "appenders": [
+        {
+          "type": "dateFile",
+          "filename": "log/payment.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "payment"
+        },
+        {
+          "type": "dateFile",
+          "filename": "log/message.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "message"
+        },
+        {
+          "type": "dateFile",
+          "filename": "log/httpaccess.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "http"
+        },
+        {
+          "type": "dateFile",
+          "filename": "log/sqllog.log",
+          "pattern": "-yyyy-MM-dd",
+          "category": "sql"
+        },
+
+        {
+          "type": "logLevelFilter",
+          "level": "ERROR",
+          "appender": {
+            "type": "file",
+            "filename": "log/errors.log"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{>layout /}
+
+{<pagescript}
+
+{/pagescript}
+{<title}
+    Mediacl condition
+{/title}
+
+{<body}
+
+
+
+    <div style="clear: both"></div>
+
+    <div class="row">
+        <div class="col-sm-12  hidden-xs" style="height:578px;background: url(/images/choose/background.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/choose/background_xs.jpg" style="width:100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" style="height:328px;background: url(/images/choose/topicon.jpg) 50% 0% no-repeat;">
+            <form action="/choose/canceraz" method="get">
+                <div class="row text-center hidden-xs"
+                     style="height:100px;margin-top:150px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
+                    <div class="col-sm-6">
+                        1.癌症类型
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category" name='t' style="width:200px;">
+                                <option value="no">请选择癌症类型</option>
+                                {#cancerCategory}
+                                    <option value="{categoryID}">{title}</option>
+                                {/cancerCategory}
+                            </select></div>
+                    </div>
+                    <div class="col-sm-6">
+                        2.癌症阶段
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category" name="s" style="width:200px;">
+                                <option value="no">请选择癌症阶段</option>
+                                <option value="1">I期</option>
+                                <option value="2">II期</option>
+                                <option value="3">III期</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row text-center" style="margin-top: 100px">
+                        <button class="lf_button_default" type="submit">决 定</button>
+                    </div>
+                </div>
+            </form>
+            <form action="/choose/canceraz" method="get">
+                <div class="row visible-xs" style="height:250px;padding-top: 120px">
+                    <div class="row text-center">
+                        1.癌症类型
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category" name="t" style="width:200px;">
+                                <option value="no">请选择癌症类型</option>
+                                <option value="1">非小细胞癌症</option>
+                            </select></div>
+                    </div>
+                    <div class="row  text-center" style="margin-top: 20px">
+                        2.癌症阶段
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category" name="s" style="width:200px;">
+                                <option value="no">请选择癌症阶段</option>
+                                <option value="1">I期</option>
+                                <option value="2">II期</option>
+                                <option value="3">III期</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row text-center" style="margin-top: 50px">
+                        <button class="lf_button_default" type="submit">决 定</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+{/body}
+
+
+

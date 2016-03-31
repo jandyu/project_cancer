@@ -1,0 +1,182 @@
+{>layout /}
+
+{<pagescript}
+    <script>
+        $(function () {
+            var currslideidx = 0;
+            var tm = 0;
+            setindex = function (idx) {
+                currslideidx = idx;
+                slidepic();
+            }
+
+            slidepic = function () {
+                clearTimeout(tm);
+                currslideidx = (currslideidx > 5) ? 0 : currslideidx;
+                $(".slideimg").hide();
+                $("#slideimg" + currslideidx).show();
+                $(".slideidx").removeClass("curridx");
+                $("#imgidx" + currslideidx).addClass("curridx");
+                currslideidx++;
+                tm = setTimeout(slidepic, 5000);
+            }
+            slidepic();
+        });
+
+    </script>
+    <style>
+        .method>.col-sm-3{
+            color:rgb(45,103,150);
+            padding-top: 150px;;
+        }
+        .method-xs>.col-xs-6{
+            color:rgb(45,103,150);
+            padding-top: 100px;;
+        }
+    </style>
+{/pagescript}
+{<title}
+    Welcome lifestar
+{/title}
+
+{<body}
+    <div class="visible-lg-block" style="position: fixed;top:180px;right:100px;z-index:1000;background-color:#ccffff;border-radius: 10px;box-shadow: 5px 5px 3px rgba(204,204,204,0.5);"><a href="users/profile"><img src="/images/home/float_button.png" ></a></div>
+    <div class="hidden-lg" style="position: fixed;top:180px;right:10px;z-index:1000;background-color:white;border-radius: 3px;"><a href="users/profile"><img src="/images/home/float_button.png" style="width:100px"></a></div>
+    <div style="clear: both"></div>
+    <div class="row hidden-lg">
+        <img src="/images/home/top1.jpg" style="width:100%">
+    </div>
+    <div class="row slide visible-lg-block" style="height:578px;">
+        {#slide}
+            {@eq key=$idx value=0}
+                <div class="col-sm-12 slideimg " id="slideimg{$idx}"
+                     style="height:578px;background: url({img}) 50% 0% no-repeat;">
+                    &nbsp;
+                </div>
+
+            {:else}
+                <div class="col-sm-12 slideimg" id="slideimg{$idx}"
+                     style="display:none;height:578px;background: url( {img} ) 50% 0% no-repeat;">
+                    &nbsp;
+                </div>
+            {/eq}
+        {/slide}
+    </div>
+    <div style="clear: both"></div>
+    <div class="row slideidxdiv visible-lg-block">
+        <div class="col-sm-8 col-sm-offset-2" style="height:50px;">
+            {#slide}
+                {@eq key=$idx value=0}
+                    <div class="col-sm-2 slideidx curridx" id="imgidx{$idx}" onclick="setindex({$idx})">
+                        <img src="{img}">
+                    </div>
+                {:else}
+                    <div class="col-sm-2 slideidx" id="imgidx{$idx}" onclick="setindex({$idx})">
+                        <img src="{img}">
+                    </div>
+                {/eq}
+            {/slide}
+        </div>
+
+    </div>
+    <div style="clear: both"></div>
+
+    <div class="row visible-lg-block" style="background: url(/images/home/methodback.png) repeat-x">
+        <div class="col-sm-12" style="height:757px;background: url(/images/home/method.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row hidden-lg">
+        <img src="/images/home/top2.jpg" style="width: 100%">
+    </div>
+    <div class="row" style="padding-bottom:20px;background-color: rgb(160,255,255)">
+        <div class="hidden-sm hidden-xs method" style="width:960px;margin-left: auto;margin-right: auto">
+            <div class="col-sm-3" style="width:230px;height:390px;background: url(/images/home/method1.jpg)">
+                星生命会基于对您基本病情的了解，为您私人定制潜在的治疗方案。
+
+            </div>
+            <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method2.jpg)">
+                星生命可以帮助您获得国内外各种治疗方案的基本信息
+                会员可以得到所有方案的详细信息.
+
+            </div>
+            <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method3.jpg)">
+                星生命的论坛完全免费，欢迎患者和家人的共同加入，可以记录您的患病历程，分享您的诊治经验，病友之间，亲朋之间，勉励扶助，携同抗癌。
+                通过我们的支持服务，您会获得更多的治疗机会.
+
+            </div>
+            <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method4.jpg)">
+                星生命方案决定工具可以帮助您通过对比所有潜在治疗方案，或者和专家在线沟通筛选出个性化的最佳方案
+
+            </div>
+
+        </div>
+        <div class="visible-xs-block visible-sm-block " style="max-width:360px;margin-left: auto;margin-right: auto">
+            <div class="row method-xs">
+                <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method1.jpg)">
+                    星生命会基于对您基本病情的了解，为您私人定制潜在的治疗方案。
+                </div>
+                <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method2.jpg)">
+                    星生命可以帮助您获得国内外各种治疗方案的基本信息
+                    会员可以得到所有方案的详细信息.
+                </div>
+
+            </div>
+            <div class="row method-xs" style="margin-top: 5px;">
+                <div class="col-xs-6"style="padding:100px 1px 0px 1px;width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method3.jpg)">
+                    星生命的论坛完全免费，可以记录您的患病历程，分享您的诊治经验，病友之间，亲朋之间，勉励扶助，携同抗癌。
+                    您会获得更多的治疗机会.
+                </div>
+                <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method4.jpg)">
+                    星生命方案决定工具可以帮助您通过对比所有潜在治疗方案，或者和专家在线沟通筛选出个性化的最佳方案
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row visible-lg-block" style="background-color:white;text-center">
+        <div class="col-sm-12" style="height:60px;background: url(/images/home/succtitle.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div style="clear: both"></div>
+        {#succ}
+            <div class="row" style="height:150px;max-width:950px;margin-left: auto;margin-right: auto">
+                <div class="col-sm-3">
+                    <img src="{head}" class="headimg">
+                </div>
+                <div class="col-sm-9" style="border-bottom: 1px dotted  gray">
+                    <p style="padding-top:30px;line-height:25px;text-indent: 40px;">
+                        {desc}
+                    </p>
+                </div>
+            </div>
+        {/succ}
+    </div>
+
+    <div class="row hidden-lg" style="background-color:white;text-center">
+        <div class="col-sm-12" style="height:60px;background: url(/images/home/succtitle.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div style="clear: both"></div>
+        {#succ}
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <img src="{head}" class="headimg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12" style="border-bottom: 1px dotted  gray">
+                    <p style="padding-top:30px;line-height:25px;text-indent: 40px;">
+                        {desc}
+                    </p>
+                </div>
+            </div>
+        {/succ}
+    </div>
+
+{/body}
+
+
+

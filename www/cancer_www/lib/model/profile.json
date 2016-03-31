@@ -1,0 +1,36 @@
+{
+  "userID":"",
+  "province": "",
+  "city": "",
+  "area":"",
+  "address": "",
+  "zipcode": "",
+  "height": "150cm",
+  "weight": "65kg",
+  "tobacco": {
+    "use": "off",
+    "amount": "一天一包",
+    "last": "2016-01-01"
+  },
+  "alcohol": {
+    "use": "off",
+    "amount": "一周1瓶"
+  },
+  "exercise": {
+    "use": "off",
+    "event": "晨跑",
+    "times": "一周1次",
+    "duration": "30分钟"
+  },
+  "treatment": {
+    "cancerCategory": "肝癌",
+    "cancerStage": "第二阶段",
+    "status": "化疗中",
+    "history": "无",
+    "socialHistory": "无",
+    "medical": "食疗"
+  },
+  "examReport": [
+    {"title":"照片","link":"/images/upload/default.png"}
+  ]
+}

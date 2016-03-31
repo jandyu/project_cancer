@@ -1,0 +1,105 @@
+{>layout /}
+
+{<pagescript}
+
+{/pagescript}
+{<title}
+    Support service
+{/title}
+
+{<body}
+
+
+
+    <div style="clear: both"></div>
+
+    <div class="row">
+        <div class="col-sm-12 hidden-xs" style="height:577px;background: url(/images/support/background.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/support/background_xs.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12" style="background: url(/images/support/topicon.jpg) 50% 0% no-repeat;">
+
+            <div class="row hidden-xs"
+                 style="margin-top:120px;height:200px;max-width:1040px;margin-left: auto;margin-right: auto">
+                {#link}
+                    <a href="{href}">
+                        <div class="col-sm-2 text-center {@first} col-sm-offset-1 {/first}">
+                            <span class="lf-icon {icon}"/>&nbsp;</span>
+                            <label style="margin-top: 23px;font-size: 15pt;color:rgb(0,54,100)">{title}</label><br>
+                        </div>
+                    </a>
+                {/link}
+            </div>
+            <div class="row visible-xs">
+                {#link}
+                    <a href="{href}">
+                        <div class="row text-center" {@first} style="margin-top: 120px" {/first}>
+                            <span class="lf-icon {icon}"/>&nbsp;</span>
+                            <label style="margin-top: 23px;font-size: 15pt;color:rgb(0,54,100)">{title}</label><br>
+                        </div>
+                    </a>
+                {/link}
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row hidden-xs">
+        <div class="col-sm-12" style="height:74px;background: url(/images/support/title.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="row text-center"
+             style="margin-bottom: 70px; margin-top:40px;max-width:1000px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
+            <div class="col-sm-6">
+                <div class="row" style="margin-top: 30px;">
+                    医院排行
+                    <div class="lf_select" style="font-size: 11pt">
+                        <select id="cancer_category" style="width:200px;">
+                            <option value="no">请选择</option>
+                        </select></div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    医生排行
+                    <div class="lf_select" style="font-size: 11pt">
+                        <select id="cancer_category" style="width:200px;">
+                            <option value="no">请选择</option>
+                        </select></div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="row" style="margin-top: 30px;">
+                    医院排行
+                    <div class="lf_select" style="font-size: 11pt;">
+                        <select id="cancer_category" style="width:200px;">
+                            <option value="no">请选择</option>
+                        </select></div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    医生排行
+                    <div class="lf_select" style="font-size: 11pt">
+                        <select id="cancer_category" style="width:200px;">
+                            <option value="no">请选择</option>
+                        </select></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{/body}
+
+
+

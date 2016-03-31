@@ -1,0 +1,321 @@
+{>layout_normal /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+    </style>
+    <script>
+        clickset = function (obj, tar) {
+            console.info($(obj).prop("checked"));
+            $.each(tar, function (idx, item) {
+                if ($(obj).prop("checked")) {
+                    console.info($("input[name='" + item + "']"));
+                    $("input[name='" + item + "']").removeAttr("disabled");
+                }
+                else {
+                    $("input[name='" + item + "']").attr("disabled", 'disabled');
+                }
+            });
+
+        }
+        function UpladFile(callback) {
+            var fileObj = $("#uploadfile").get(0).files[0]; // 获取文件对象
+            //var FileController = "/scripts/angular/Upload/Upload.ashx";                    // 接收上传文件的后台地址
+            var FileController = "/upload/files";
+            //http://104.197.2.38:8080/web-matics/api/userexport/93e1ad96-4d15-40f9-ba8b-41ab36ce401c.jpg
+            // FormData 对象
+            var form = new FormData();
+            form.append("file", fileObj);                           // 文件对象
+
+            // XMLHttpRequest 对象
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("post", FileController, true);
+
+            //rtn = function () {
+            //
+            //}
+            xhr.onload = function (rtn) {
+                callback(rtn.target.responseText);
+            };
+            xhr.send(form);
+        }
+        function uploadOk(rtn) {
+            var fileObj = $("#uploadfile").get(0).files[0];
+            console.info(rtn);
+            console.info(fileObj);
+            var l = $(".reportlink").length;
+            var html = '<a href="#link#" target="_blank">#title#</a> <input type="hidden" name="examReport.#l#.link" value="#link#"> <input type="hidden" name="examReport.#l#.title" value="#title#"><br>';
+            html = html.replace(/#link#/g, rtn);
+            html = html.replace(/#l#/g, l);
+            html = html.replace(/#title#/g, fileObj.name);
+
+            console.info(html);
+            $("#filelist").append(html);
+        }
+    </script>
+{/pagescript}
+{<title}
+    个人情况
+{/title}
+
+
+{<titleview}
+    <div class="row" style="margin-top: 80px;">
+        <form class="form-horizontal">
+
+        </form>
+    </div>
+
+{/titleview}
+{<body}
+    <div class="row" style="background-color: rgb(250,251,252);margin-top: -120px;">
+        <div class="col-sm-2" style="padding-top:20px;background-color: rgb(250,251,252)">
+
+            <div class="row text-center" style="height:100px;border-bottom: 0px;">
+                <img src="{user.photo}" style="width:100px">
+            </div>
+            <div class="row">
+                {user.fullname}
+            </div>
+            <div class="row">
+                <a href="/users/center"><h5>基本资料</h5></a>
+            </div>
+            <div class="row">
+                <a href="/users/profile"><h5>个人情况</h5></a>
+            </div>
+
+        </div>
+        <div class="col-sm-10" style="padding-top:20px;background-color: white">
+            <h4>个人情况</h4>
+
+            <form action="/users/profile" method="post" class="form-horizontal">
+                {#user}
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">姓名</label>
+
+                        <div class="col-sm-2">
+                            <p class="form-control-static">{fullname}</p>
+                        </div>
+
+                    </div>
+
+                {/user}
+                {#profile}
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">地址</label>
+
+                        <div class="col-sm-2">
+                            <select class="form-control" name="province" value="{province}">
+                                <option value="浙江">浙江</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="city" value="{city}">
+                                <option value="杭州">杭州</option>
+
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <select class="form-control" name="area" value="{area}">
+                                <option value="西湖区">西湖区</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="zipcode" placeholder="邮编" value="{zipcode}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"> </label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="address" placeholder="地址" value="{address}">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">体重 </label>
+
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="weight" placeholder="体重" value="{weight}">
+                        </div>
+
+                        <label class="col-sm-2 control-label">身高 </label>
+
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="height" placeholder="身高" value="{height}">
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">是否抽烟 <input type="checkbox" name="tobacco.use"
+                                                                          onclick="clickset($(this),['tobacco.amount','tobacco.last'])"
+                                                                          {@eq key=tobacco.use value="on"}checked="checked"{/eq}></label>
+                        <label class="col-sm-2 control-label">抽多少烟</label>
+
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="tobacco.amount" placeholder="包"
+                                   value="{tobacco.amount}" {@ne key=tobacco.use value="on"}disabled{/ne}>
+                        </div>
+                        <label class="col-sm-2 control-label">上次什么时候</label>
+
+                        <div class="col-sm-2">
+                            <input type="date" class="form-control" name="tobacco.last" placeholder=""
+                                   value="{tobacco.last}" {@ne key=tobacco.use value="on"}disabled{/ne}>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">是否饮酒 <input type="checkbox" name="alcohol.use"
+                                                                          onclick="clickset($(this),['alcohol.amount'])"
+                                                                          {@eq key=alcohol.use value="on"}checked="checked"{/eq}></label>
+                        <label class="col-sm-2 control-label">喝多少酒</label>
+
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" name="alcohol.amount" placeholder=""
+                                   value="{alcohol.amount}" {@ne key=alcohol.use value="on"}disabled{/ne}>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">是否锻炼 <input type="checkbox" name="exercise.use"
+                                                                          onclick="clickset($(this),['exercise.event','exercise.times','exercise.duration'])"
+                                                                          {@eq key=exercise.use value="on"}checked="checked"{/eq}></label>
+                        <label class="col-sm-2 control-label">一般做什么锻炼</label>
+
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="exercise.event" placeholder="包"
+                                   value="{exercise.event}" {@ne key=exercise.use value="on"}disabled{/ne}>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <label class="col-sm-2 control-label">一周锻炼几次</label>
+
+                        <div class="col-sm-2">
+                            <input type="rang" class="form-control" name="exercise.times" placeholder=""
+                                   value="{exercise.times}" {@ne key=exercise.use value="on"}disabled{/ne}>
+                        </div>
+                        <label class="col-sm-2 control-label">每次多少时间</label>
+
+                        <div class="col-sm-2">
+                            <input type="rang" class="form-control" name="exercise.duration" placeholder=""
+                                   value="{exercise.duration}" {@ne key=exercise.use value="on"}disabled{/ne}>
+                        </div>
+                    </div>
+
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">目前医疗情况 </label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="treatment.status" placeholder="目前医疗情况"
+                                   value="{treatment.status}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">医疗辅助情况 </label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="treatment.medical" placeholder="医疗辅助情况"
+                                   value="{treatment.medical}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">病史 </label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="treatment.history" placeholder="过往的病历情况"
+                                   value="{treatment.history}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">亲属病史 </label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="treatment.socialHistory"
+                                   placeholder="亲属病史的相关病历情况"
+                                   value="{treatment.socialHistory}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">癌症分类</label>
+
+                        <div class="col-sm-2">
+                            <select class="form-control" name="treatment.cancelCategory"
+                                    value="{treatment.cancerCategory}">
+                                <option value="肺癌">肺癌</option>
+
+                            </select>
+                        </div>
+                        <label class="col-sm-2 control-label">癌症阶段</label>
+
+                        <div class="col-sm-2">
+                            <select class="form-control" name="treatment.cancerStage" value="{treatment.cancerStage}">
+                                <option value="1">初期(第一阶段)</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">已经提供的资料</label>
+
+                        <div class="col-sm-6" id="filelist">
+                            {#examReport}
+                                <a href="{link}" target="_blank">{title}</a>
+                                <input type="hidden" class="reportlink" name="examReport.{$idx}.link" value="{link}">
+                                <input type="hidden" name="examReport.{$idx}.title" value="{title}"><br>
+                            {/examReport}
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-offset-6">{info}</label>
+
+                        <div class=" col-sm-offset-1 col-sm-2">
+                            <button type="submit" class="col-sm-12 btn btn-primary">保 存</button>
+                        </div>
+                    </div>
+
+
+
+                {/profile}
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group" >
+                    <label class="col-sm-2 control-label">诊断资料上传</label>
+                    <div class="col-sm-2">
+                        <input type="file" class="form-control" id="uploadfile">
+                    </div>
+                    <button type="button" class="col-sm-1 btn btn-info"
+                            onclick="UpladFile(uploadOk)">上 传
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+{/body}
+
+
+

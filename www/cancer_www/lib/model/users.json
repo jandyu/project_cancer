@@ -1,0 +1,11 @@
+{
+  "account": "",
+  "photo":"/images/upload/photo.jpg",
+  "fullname": "name",
+  "passwd": "123",
+  "email": "",
+  "role": "member",
+  "birthday": "",
+  "tel": "",
+  "sex": "M"
+}

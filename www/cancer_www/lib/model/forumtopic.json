@@ -1,0 +1,21 @@
+[
+  {"title": "胃癌","desc":"全面支持的资源，我们的在线肺癌论坛是癌症患者和康复者和其家人一个有价值的方式来分享故事和信息，研究治疗方案和在线交流。","category": "癌症肿瘤"},
+  {"title": "肺癌","desc":"全面支持的资源，我们的在线肺癌论坛是癌症患者和康复者和其家人一个有价值的方式来分享故事和信息，研究治疗方案和在线交流。","category": "癌症肿瘤"},
+  {"title": "乳腺癌","desc":"","category": "癌症肿瘤"},
+  {"title": "淋巴癌","desc":"","category": "癌症肿瘤"},
+  {"title": "骨髓癌","desc":"","category": "癌症肿瘤"},
+  {"title": "传统","desc":"","category": "癌症治疗"},
+  {"title": "保险","desc":"","category": "癌症治疗"},
+  {"title": "治疗后","desc":"","category": "癌症治疗"},
+  {"title": "营养的","desc":"","category": "癌症治疗"},
+  {"title": "副作用","desc":"","category": "癌症治疗"},
+  {"title": "生活方式","desc":"","category": "照顾者"},
+  {"title": "支持帮助","desc":"","category": "照顾者"},
+  {"title": "支持技巧","desc":"","category": "照顾者"},
+  {"title": "饮食","desc":"","category": "癌症营养"},
+  {"title": "食谱","desc":"","category": "癌症营养"},
+  {"title": "补充","desc":"","category": "癌症营养"},
+  {"title": "诊断影像学","desc":"","category": "肿瘤诊断"},
+  {"title": "实验室","desc":"","category": "肿瘤诊断"},
+  {"title": "其他测试","desc":"","category": "肿瘤诊断"}
+]
