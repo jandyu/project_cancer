@@ -4,6 +4,7 @@ var lifestar = require("../lib/lifestar");
 var logger = require("../lib/log").sqllog;
 var _ = require("underscore");
 var sha1 = require("sha1");
+var autil = require("../lib/autil");
 
 //lifestar.resource.data.session(req.session.user)
 /* GET users listing. */
@@ -41,7 +42,7 @@ router.post('/login', function (req, res) {
 
                 var log = lifestar.UsersLog.newModelData();
                 log.userID = rtn[0]._id;
-                log.time = (new Date()).toLocaleString();
+                log.time = autil.DateFormat (new Date(), 'yyyy-MM-dd hh:mm:ss');
                 log.timestamp = (new Date()).valueOf();
                 log.ip = req.ip;
 

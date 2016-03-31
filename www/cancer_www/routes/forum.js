@@ -132,7 +132,8 @@ router.post("/newreply", function (req, res) {
 
 router.get("/search", function (req, res) {
     var keyword = req.query.keyword;
-    var q = {$or:[{title:{$regex:RegExp(keyword)}},{content:{$regex:RegExp(keyword)}}]};
+    //todo ingor case
+    var q = {$or:[{title:{$regex:RegExp(keyword),$options: ''}},{content:{$regex:RegExp(keyword),$options: 'i'}}]};
 
     Promise.all([
 
