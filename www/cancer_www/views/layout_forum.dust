@@ -39,7 +39,11 @@
             {+titleview}  {/titleview}
         </div>
 
-        <div class="col-sm-12" style="padding:50px;">
+
+        <div class="col-sm-12 visible-xs" style="padding:5px;">
+            {+body /}
+        </div>
+        <div class="col-sm-12 hidden-xs" style="padding:50px;">
             {+body /}
         </div>
     </div>

@@ -341,7 +341,7 @@ var lifestar = {
                 logo: {img: "/images/logo.png", link: '/'},
                 menu: [
                     {title: "首页", link: "/"},
-                    {title: "为何选择心生命", link: "/whylf"},
+                    {title: "为何选择星生命", link: "/whylf"},
                     {title: "病情和可选方案", link: "/choose"},
                     {title: "向别人学习", link: "/connect"},
                     {title: "支持服务", link: "/support"},
@@ -438,7 +438,7 @@ var lifestar = {
                 return _.extend(_.extend({}, this.layout), {
                     menu: [
                         {title: "首 页", link: "/"},
-                        {title: "为何选择心生命", link: "/whylf"},
+                        {title: "为何选择星生命", link: "/whylf"},
                         {title: "病情和可选方案", link: "/choose"},
                         {title: "向别人学习", link: "/connect"},
                         {title: "支持服务", link: "/support"},
