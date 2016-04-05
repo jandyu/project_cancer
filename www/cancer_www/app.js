@@ -46,6 +46,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false}
 }));
+
 app.use(function (req, res, next) {
 
     var url = req.originalUrl;
