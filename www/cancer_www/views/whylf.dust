@@ -41,21 +41,29 @@
 
     <div class="row" style="padding-bottom:20px;background-color: white">
         <div class="hidden-sm hidden-xs" style="width:1040px;margin-left: auto;margin-right: auto">
+            <a href="/connect">
             <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method1.png)">
                 星生命的潜在治疗方案可以帮助您更加了解您的病痛. 我们会了解您的病情从而给您一个潜在的私人定制的治疗方案。
             </div>
+            </a>
+            <a href="/choose">
             <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method2.png)">
                 星生命的潜在治疗方案可以帮助您了解哪些治疗方案在国内或者国外.
                 星生命会员可以得到我们给予的所有癌症国内外治疗方案.
             </div>
+            </a>
+            <a href="/forum/index">
             <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method3.png)">
                 星生命的论坛可以帮助您了解您的病痛和治疗方案.
                 星生命在线论坛可以让所有抗癌者本人或加入一起共同抗癌，共同用治愈案例来相互鼓励。星生命在线论坛是完全免费的。
                 在星生命论坛您也可以使用第二已经治疗方案.
             </div>
+            </a>
+            <a href="/support">
             <div class="col-sm-3" style="padding-top:180px;color:white;margin-left:20px;height:460px;width:235px;background: url(/images/why/method4.png)">
                 星生命的潜在治疗方案可以帮助您了解哪些治疗方案.  星生命方案决定工具可以帮助您对比所哟治疗方案或者和专家在线进行沟通!
             </div>
+            </a>
         </div>
         <div class="visible-xs-block visible-xs" style="width:260px;margin-left: auto;margin-right: auto">
             <div class="row">
