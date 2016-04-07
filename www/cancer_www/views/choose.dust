@@ -41,9 +41,12 @@
                         <div class="lf_select" style="font-size: 11pt">
                             <select id="cancer_category" name="s" style="width:200px;">
                                 <option value="no">请选择癌症阶段</option>
-                                <option value="1">I期</option>
-                                <option value="2">II期</option>
-                                <option value="3">III期</option>
+                                <option value="1">初期</option>
+                                <option value="2">第一阶段</option>
+                                <option value="3">第二阶段</option>
+                                <option value="4">第三阶段</option>
+                                <option value="5">第四阶段</option>
+                                <option value="6">复发阶段</option>
                             </select>
                         </div>
                     </div>

@@ -1,0 +1,85 @@
+{>layout_forum /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+    </style>
+    <script>
+        login = function () {
+            $("form").submit();
+        }
+    </script>
+{/pagescript}
+{<title}
+    admin
+{/title}
+
+
+{<titleview}
+    <div class="row text-center">
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="/forum/newreply" method="post" class="form-horizontal">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">回复你的意见</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <input type="hidden" name="articleID" value="{article._id}">
+                            <input type="hidden" name="userID" value="{layout.sessionuser._id}">
+                            <input type="hidden" name="photo" value="{layout.sessionuser.photo}">
+                            <input type="hidden" name="fullname" value="{layout.sessionuser.fullname}">
+
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">内容: </label>
+
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="content" rows="5"></textarea>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+                            <button type="submit" class="btn btn-primary">保 存</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{/titleview}
+{<body}
+
+
+    <div class="row" style="text-indent:25px;  margin-top:-150px;">
+
+        <h2>forum</h2>
+        <ul>
+            <li><a href="/admin/init/forumtopic">init forum topic</a></li>
+        </ul>
+
+       </div>
+    <div class="row">&nbsp;</div>
+
+
+
+{/body}
+
+
+

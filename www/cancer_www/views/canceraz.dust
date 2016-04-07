@@ -42,9 +42,9 @@
         <div class="row" style="margin-right:40px;margin-left:40px;font-size:13pt;border-top: 1px solid white">
             <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/forum/index"> 连 接 </a></div>
             <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/users/profile"> 比 较 </a></div>
-            <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white"> 决 定 </a></div>
-            <div class="col-sm-3 visible-xs" style="margin-top:50px"> <a > <img src="/images/home/float_button.png" > </a></div>
-            <div class="col-sm-3 hidden-xs" style="margin-top:-50px"> <a > <img src="/images/home/float_button.png" > </a></div>
+            <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/users/center"> 决 定 </a></div>
+            <div class="col-sm-3 visible-xs" style="margin-top:50px"> <a href="/users/center" > <img src="/images/home/float_button.png" > </a></div>
+            <div class="col-sm-3 hidden-xs" style="margin-top:-50px"> <a href="/users/center"> <img src="/images/home/float_button.png" > </a></div>
 
         </div>
 

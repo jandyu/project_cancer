@@ -12,11 +12,15 @@
     "categoryID": "0103"
   },
   {
-    "title": "淋巴癌",
+    "title": "肝癌",
     "categoryID": "0104"
   },
   {
-    "title": "骨髓癌",
+    "title": "大肠癌",
     "categoryID": "0105"
+  },
+  {
+    "title": "食道癌",
+    "categoryID": "0106"
   }
 ]

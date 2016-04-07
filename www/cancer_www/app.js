@@ -54,7 +54,7 @@ app.use(function (req, res, next) {
 
 
     if(!req.session.user) {
-        var authlist = ["/forum", "/users"];
+        var authlist = ["/forum", "/users","/admin"];
         var allowlist = ["/users/login","/users/register","/forum/index"];
 
         if(_.find(allowlist,function(item){return RegExp("^"+item).test(url);}) == undefined){
@@ -73,6 +73,7 @@ app.use('/', require('./routes/index'));
 
 app.use('/users', require('./routes/users'));
 app.use('/forum', require('./routes/forum'));
+app.use('/admin', require('./routes/admin'));
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

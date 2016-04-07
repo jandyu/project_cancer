@@ -164,6 +164,7 @@ router.get("/profile", function (req, res) {
     var uid = req.session.user.userid;
     var info=['保存失败','保存成功',""];
     var viewData = {layout: lifestar.resource.data.session(req.session.user)};
+    viewData["cancerCategory"] = lifestar.CancerCategory.getCategory();
     viewData.info = info[req.query.ok?req.query.ok:2];
     lifestar.Users.doPromise(lifestar.Users.queryDataByID, uid).then(function (users) {
             viewData.user = users[0];

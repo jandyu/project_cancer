@@ -177,7 +177,7 @@ var dal = {
     updateDataWhere: function (query, data, callback, errback) {
         //var spec = {'_id': new BSON.ObjectID(id)};
         var mdata = {$set: data};
-        this.updateDataWhereWithData(query,mdata,callback,errback);
+        this.updateDataWhereWithData(query, mdata, callback, errback);
     },
     updateDataWhereWithData: function (query, data, callback, errback) {
         //var spec = {'_id': new BSON.ObjectID(id)};
@@ -424,11 +424,11 @@ var lifestar = {
             },
             support: {
                 link: [
-                    {icon: 'lf-icon-usa', title: '健康咨询', href: '/lv3/second'},
+                   // {icon: 'lf-icon-usa', title: '健康咨询', href: '/lv3/second'},
                     {icon: 'lf-icon-travl', title: '医疗旅游(美国)', href: '/lv3/travl'},
-                    {icon: 'lf-icon-test', title: '临床试验服务', href: '/lv3/test'},
-                    {icon: 'lf-icon-look', title: '家庭护理和康复服务', href: '/lv3/look'},
-                    {icon: 'lf-icon-case', title: '病案管理服务', href: '/lv3/case'},
+                  //  {icon: 'lf-icon-test', title: '临床试验服务', href: '/lv3/test'},
+                    {icon: 'lf-icon-look', title: '康复服务', href: '/lv3/look'},
+                  //  {icon: 'lf-icon-case', title: '病案管理服务', href: '/lv3/case'},
                 ]
             },
             story: {},
@@ -446,7 +446,7 @@ var lifestar = {
                         {title: "注 销", link: "/users/login?o=1"},
                         {title: user.fullname, link: "/users/center"}
                     ],
-                    sessionuser:{_id:user.userid,fullname:user.fullname,photo:user.photo}
+                    sessionuser: {_id: user.userid, fullname: user.fullname, photo: user.photo}
                 })
             }
         },
@@ -619,12 +619,14 @@ var lifestar = {
         initTopics: function () {
             var d = this.newModelData();
             var me = this;
-            _.each(d, function (item) {
-                me.insertData(item, function () {
-                }, function () {
+            me.deleteData({}, function () {
+                _.each(d, function (item) {
+                    me.insertData(item, function () {
+                    }, function () {
+                    });
                 });
+            }, function () {
             });
-
         },
         getTopics: function () {
             var me = this;

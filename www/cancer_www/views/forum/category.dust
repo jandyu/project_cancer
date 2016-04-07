@@ -84,7 +84,7 @@
             <div class="row">
                 {#topic}
                     <h4 style="border-bottom: 2px solid rgb(204,205,206)"><span
-                            style="padding-bottom:5px;margin-bottom:-2px ;display:block;width:100px;border-bottom: 15px solid rgb(0,54,100);box-shadow: 5px 0px 0px white;">{title}</span>
+                            style="padding-bottom:5px;margin-bottom:-2px ;display:block;width:120px;border-bottom: 15px solid rgb(0,54,100);box-shadow: 5px 0px 0px white;">{title}</span>
                     </h4>
                     <h5 style="margin: 20px;">{desc}</h5>
                 {/topic}

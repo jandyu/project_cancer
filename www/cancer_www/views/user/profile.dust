@@ -84,15 +84,15 @@
                 {user.fullname}
             </div>
             <div class="row">
-                <a href="/users/center"><h5>基本资料</h5></a>
+                <a href="/users/center"><h5>用户资料</h5></a>
             </div>
             <div class="row">
-                <a href="/users/profile"><h5>个人情况</h5></a>
+                <a href="/users/profile"><h5>癌症康复者资料</h5></a>
             </div>
 
         </div>
         <div class="col-sm-10" style="padding-top:20px;background-color: white">
-            <h4>个人情况</h4>
+            <h4>癌症康复者资料</h4>
 
             <form action="/users/profile" method="post" class="form-horizontal">
                 {#user}
@@ -167,7 +167,7 @@
                         </div>
                         <label class="col-sm-2 control-label">上次什么时候</label>
 
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" name="tobacco.last" placeholder=""
                                    value="{tobacco.last}" {@ne key=tobacco.use value="on"}disabled{/ne}>
                         </div>
@@ -258,6 +258,9 @@
                             <select class="form-control" name="treatment.cancelCategory"
                                     value="{treatment.cancerCategory}">
                                 <option value="肺癌">肺癌</option>
+                                {#cancerCategory}
+                                    <option value="{categoryID}">{title}</option>
+                                {/cancerCategory}
 
                             </select>
                         </div>
@@ -265,7 +268,12 @@
 
                         <div class="col-sm-2">
                             <select class="form-control" name="treatment.cancerStage" value="{treatment.cancerStage}">
-                                <option value="1">初期(第一阶段)</option>
+                                <option value="1">初期</option>
+                                <option value="2">第一阶段</option>
+                                <option value="3">第二阶段</option>
+                                <option value="4">第三阶段</option>
+                                <option value="5">第四阶段</option>
+                                <option value="6">复发阶段</option>
 
                             </select>
                         </div>
