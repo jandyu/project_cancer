@@ -1,6 +1,8 @@
 {>layout_normal /}
 
 {<pagescript}
+    <script src="/javascripts/citylist.js"></script>
+    <script src="/javascripts/underscore-min.js"></script>
     <style>
         .col-sm-2 > .row {
             height: 35px;
@@ -10,6 +12,16 @@
         }
     </style>
     <script>
+        $(function(){
+            fillProvince($("#province"));
+            console.info("{profile.province}");
+            $("#province").val("{profile.province}");
+            $("#province").change();
+            $("#citylst").val("{profile.city}");
+            $("#citylst").change();
+            $("#ctlst").val("{profile.area}");
+
+        });
         clickset = function (obj, tar) {
             console.info($(obj).prop("checked"));
             $.each(tar, function (idx, item) {
@@ -112,20 +124,19 @@
                         <label class="col-sm-2 control-label">地址</label>
 
                         <div class="col-sm-2">
-                            <select class="form-control" name="province" value="{province}">
-                                <option value="浙江">浙江</option>
+                            <select class="form-control" id="province" name="province" value="{province}" onchange="setCity($('#citylst'),$(this).val())">
 
                             </select>
                         </div>
                         <div class="col-sm-2">
-                            <select class="form-control" name="city" value="{city}">
-                                <option value="杭州">杭州</option>
+                            <select class="form-control" id="citylst" name="city" value="{city}" onchange="setCounty($('#ctlst'),$('#province').val(),$(this).val())">
+
 
                             </select>
                         </div>
                         <div class="col-sm-2">
-                            <select class="form-control" name="area" value="{area}">
-                                <option value="西湖区">西湖区</option>
+                            <select class="form-control" id="ctlst" name="area" value="{area}">
+
                             </select>
                         </div>
                         <div class="col-sm-2">
