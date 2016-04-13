@@ -40,8 +40,8 @@
 {/title}
 
 {<body}
-    <div class="visible-lg-block" style="position: fixed;top:180px;left:50%;z-index:1000;background-color:#ccffff;border-radius: 10px;box-shadow: 5px 5px 3px rgba(204,204,204,0.5);"><a href="users/profile"><img src="/images/home/float_button.png" ></a></div>
-    <div class="hidden-lg" style="position: fixed;top:180px;right:10px;z-index:1000;background-color:white;border-radius: 3px;"><a href="users/profile"><img src="/images/home/float_button.png" style="width:100px"></a></div>
+    <div class="visible-lg-block" style="position: fixed;top:180px;left:1%;z-index:1000;background-color:#ccffff;border-radius: 10px;box-shadow: 1px 1px 1px rgba(204,204,204,0.5);"><a href="users/profile"><img src="/images/home/float_button.png" ></a></div>
+    <div class="hidden-lg" style="position: fixed;top:180px;left:10px;z-index:1000;background-color:white;border-radius: 3px;"><a href="users/profile"><img src="/images/home/float_button.png" style="width:100px"></a></div>
     <div style="clear: both"></div>
     <div class="row hidden-lg">
         <img src="/images/home/top1.jpg" style="width:100%">

@@ -1,19 +1,7 @@
-{>layout_forum /}
+{>layout_admin /}
 
 {<pagescript}
-    <style>
-        .col-sm-2 > .row {
-            height: 35px;
-            text-align: center;
 
-            border-bottom: 1px solid rgb(150, 151, 152);
-        }
-    </style>
-    <script>
-        login = function () {
-            $("form").submit();
-        }
-    </script>
 {/pagescript}
 {<title}
     admin
@@ -23,7 +11,6 @@
 {<titleview}
     <div class="row text-center">
         <!-- Button trigger modal -->
-
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -65,17 +52,14 @@
 
 {/titleview}
 {<body}
+    <!-- Nav tabs -->
 
 
-    <div class="row" style="text-indent:25px;  margin-top:-150px;">
 
-        <h2>forum</h2>
-        <ul>
-            <li><a href="/admin/init/forumtopic">init forum topic</a></li>
-        </ul>
 
-       </div>
-    <div class="row">&nbsp;</div>
+
+
+
 
 
 

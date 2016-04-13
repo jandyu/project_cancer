@@ -1,26 +1,30 @@
 [
   {
     "title": "胃癌",
-    "categoryID": "0101"
+    "_id": "0101"
   },
   {
-    "title": "肺癌",
-    "categoryID": "0102"
+    "title": "非小细胞肺癌",
+    "_id": "0102"
+  },
+  {
+    "title": "小细胞肺癌",
+    "_id": "0102"
   },
   {
     "title": "乳腺癌",
-    "categoryID": "0103"
+    "_id": "0103"
   },
   {
     "title": "肝癌",
-    "categoryID": "0104"
+    "_id": "0104"
   },
   {
     "title": "大肠癌",
-    "categoryID": "0105"
+    "_id": "0105"
   },
   {
     "title": "食道癌",
-    "categoryID": "0106"
+    "_id": "0106"
   }
 ]

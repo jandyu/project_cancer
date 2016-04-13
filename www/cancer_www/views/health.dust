@@ -1,0 +1,33 @@
+{>layout /}
+
+{<pagescript}
+
+{/pagescript}
+{<title}
+    {title}
+{/title}
+
+{<body}
+
+    <div style="clear: both"></div>
+
+    <div class="row" style="height:100px;background-color:rgb(0,54,100);">
+        &nbsp;
+    </div>
+    <div class="row">
+        <div class="col-sm-12" style="height:757px;background: url(/images/healthcare/kf1_01.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+{/body}
+
+
+

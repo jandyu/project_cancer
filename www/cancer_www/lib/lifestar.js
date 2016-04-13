@@ -418,8 +418,8 @@ var lifestar = {
             connect: {
                 link: [
                     {icon: 'lf-icon-forum', title: '社区留言板', subtitle: '聊天和常见问题', href: '/forum/index'},
-                    {icon: 'lf-icon-coach', title: '星生命专家', subtitle: '星生命专家让你保持健康', href: '/lv3/coach'},
-                    {icon: 'lf-icon-second', title: '健康咨询', subtitle: '远程咨询会诊', href: '/lv3/second'}
+                    //{icon: 'lf-icon-coach', title: '星生命专家', subtitle: '星生命专家让你保持健康', href: '/lv3/coach'},
+                    //{icon: 'lf-icon-second', title: '健康咨询', subtitle: '远程咨询会诊', href: '/lv3/second'}
                 ]
             },
             support: {
@@ -427,7 +427,7 @@ var lifestar = {
                    // {icon: 'lf-icon-usa', title: '健康咨询', href: '/lv3/second'},
                     {icon: 'lf-icon-travl', title: '医疗旅游(美国)', href: '/lv3/travl'},
                   //  {icon: 'lf-icon-test', title: '临床试验服务', href: '/lv3/test'},
-                    {icon: 'lf-icon-look', title: '康复服务', href: '/lv3/look'},
+                    {icon: 'lf-icon-look', title: '康复服务', href: '/lv3/health1'},
                   //  {icon: 'lf-icon-case', title: '病案管理服务', href: '/lv3/case'},
                 ]
             },
@@ -600,7 +600,12 @@ var lifestar = {
                         time: "12小时回复"
                     }]
 
-            }
+            },
+            health1:{
+            },
+            health2:{},
+            health3:{}
+
         }
     }),
 
@@ -663,6 +668,12 @@ var lifestar = {
     CancerCategory: _.extend(_.extend({}, dal), {
         "collectionName": "CancerCategory", "modelName": "cancercategory",
         getCategory: function () {
+            return this.newModelData();
+        }
+    }),
+    CancerStage: _.extend(_.extend({}, dal), {
+        "collectionName": "CancerCategory", "modelName": "cancerstage",
+        getStage: function () {
             return this.newModelData();
         }
     })

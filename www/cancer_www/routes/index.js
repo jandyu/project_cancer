@@ -22,10 +22,19 @@ router.get('/:m?', function (req, res) {
 
     var viewData = lifestar.resource.data[viewName];
     viewData["layout"] = lifestar.resource.data.session(req.session.user);
-    if (pageName == "choose") viewData["cancerCategory"] = lifestar.CancerCategory.getCategory();
+    if (pageName == "choose"){
+        lifestar.CancerCategory.queryData({},function(rtn){
+            viewData["cancerCategory"] = rtn;
+            viewData["cancerStage"] = lifestar.CancerStage.getStage();
+            res.render(viewName, viewData);
+        },function(){});
+
+    }
+    else {
 
 //    logger.info(viewData);
-    res.render(viewName, viewData);
+        res.render(viewName, viewData);
+    }
 
 });
 router.get("/legal/:m?", function (req, res) {
@@ -48,7 +57,12 @@ router.get("/lv3/:m?", function (req, res) {
     var viewData = lifestar.resource.lv3[viewName];
     viewData["layout"] = lifestar.resource.data.session(req.session.user);
     logger.info(viewData);
-    res.render("lv3page", viewData);
+    if (/health/i.test(viewName)){
+        res.render(viewName,viewData);
+    }
+    else {
+        res.render("lv3page", viewData);
+    }
 });
 
 router.get("/choose/canceraz", function (req, res) {

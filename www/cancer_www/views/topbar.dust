@@ -27,7 +27,7 @@
 
     <div class="col-sm-12 menu">
         <ul class="nav nav-tabs" style="margin-top: 55px;">
-            <li style="margin-top: -35px;padding: 0px"><img src="{layout.logo.img}"></li>
+            <li style="margin-top: -35px;padding: 0px"><img src="{layout.logo.img}" style="width:100%;max-width:280px"></li>
             {#layout.menu}
                 <li style="margin-left: 5px;"><a href="{link}">{title}</a></li>
             {/layout.menu}

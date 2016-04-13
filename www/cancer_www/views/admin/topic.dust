@@ -1,0 +1,106 @@
+{>layout_admin /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+
+        .list-group-item {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        edit = function (id, title,desc,category) {
+            $("#cid").val(id);
+            $("#title").val(title);
+            $("#desc").val(desc);
+            $("#category").val(category);
+            $('#myModal').modal('show');
+        }
+    </script>
+{/pagescript}
+{<title}
+    admin
+{/title}
+
+{<body}
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="/admin/cancertype">癌症类型</a></li>
+                <li role="presentation" class="active"><a href="/admin/topic">论坛主题</a></li>
+                <li role="presentation"><a href="/admin/info">癌症资料</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="list-group">
+                <li class="list-group-item active" onclick="edit('0','')">增加新主题</li>
+                {#topic}
+                    <li class="list-group-item" onclick="edit('{_id}','{title}','{desc}','{category}')">{category} - {title}</li>
+
+                {/topic}
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/admin/topic" method="post" class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">论坛主题</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <input type="hidden" id="cid" name="_id" value="0">
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称: </label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control" id="title" name="title">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">分类: </label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control" id="category" name="category">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">说明: </label>
+
+                            <div class="col-sm-9">
+                                <textarea class="form-control" id="desc" name="desc" rows="5"></textarea>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+                        <button type="submit" class="btn btn-primary">保 存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{/body}
+
+
+

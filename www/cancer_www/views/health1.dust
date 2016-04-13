@@ -1,0 +1,36 @@
+{>layout /}
+
+{<pagescript}
+
+{/pagescript}
+{<title}
+    {title}
+{/title}
+
+{<body}
+
+    <div style="clear: both"></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_01.jpg" style="width:100%" usemap="#planetmap">
+        <map name="planetmap" id="planetmap">
+            <area shape="rect" coords="760,100,890,165" href ="/lv3/health1" alt="康复服务介绍" onfocus="blur(this);"/>
+            <area shape="rect" coords="900,100,1030,165" href ="/lv3/health2" alt="康复解决方案" onfocus="blur(this);"/>
+            <area shape="rect" coords="1060,100,1190,165" href ="/lv3/health3" alt="康复导师" onfocus="blur(this);"/>
+        </map>
+    </div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_02.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_03.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_04.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_05.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_06.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_07.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_08.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_09.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_10.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_11.jpg" style="width:100%"></div></div>
+    <div class="row"><div class="col-sm-12" style="padding: 0px;margin: 0px;"><img src="/images/healthcare/kf1_12.jpg" style="width:100%"></div></div>
+
+
+{/body}
+
+
+

@@ -37,8 +37,9 @@
             {layout.policy.desc}
         </p>
 
-        <p>
-            <img src="{layout.logo.img}">
+        <p style="height:160px;line-height: 160px;">
+            <a href="http://www.grs-hs.com/" target="_blank"><img src="http://www.grs-hs.com/Portals/3/grs-logo%20-%20Copy.png" style="height:79px;margin-top:30px"></a>
+            <img src="{layout.logo.img}" style="margin-left: 50px;">
         </p>
     </div>
 

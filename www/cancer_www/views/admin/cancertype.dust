@@ -1,0 +1,88 @@
+{>layout_admin /}
+
+{<pagescript}
+    <style>
+        .col-sm-2 > .row {
+            height: 35px;
+            text-align: center;
+
+            border-bottom: 1px solid rgb(150, 151, 152);
+        }
+        .list-group-item{
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        edit = function(id,title){
+            $("#cid").val(id);
+            $("#ctitle").val(title);
+            $('#myModal').modal('show');
+        }
+    </script>
+{/pagescript}
+{<title}
+    admin
+{/title}
+
+{<body}
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs" >
+                <li role="presentation" class="active"><a href="/admin/cancertype" >癌症类型</a></li>
+                <li role="presentation"><a href="/admin/topic" >论坛主题</a></li>
+                <li role="presentation"><a href="/admin/info" >癌症资料</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-sm-3">
+            <ul class="list-group">
+                <li class="list-group-item active" onclick="edit('0','')">增加新分类</li>
+                {#category}
+                <li class="list-group-item" onclick="edit('{_id}','{title}')">{title}</li>
+
+                {/category}
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/admin/cancertype" method="post" class="form-horizontal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">癌症分类</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <input type="hidden" id="cid" name="_id" value="0">
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称: </label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control" id="ctitle" name="title">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
+                        <button type="submit" class="btn btn-primary">保 存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{/body}
+
+
+
