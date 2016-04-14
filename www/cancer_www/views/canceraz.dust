@@ -1,7 +1,15 @@
 {>layout /}
 
 {<pagescript}
-
+    <script>
+        $(function () {
+            $("#cancer_category1").val('{cancer.cancerType}');
+            $("#cancer_category").val('{cancer.cancerType}');
+            $("#cancer_stage1").val('{cancer.cancerStage}');
+            $("#cancer_stage").val('{cancer.cancerStage}');
+            $(document).scrollTop(800);
+        });
+    </script>
 {/pagescript}
 {<title}
     癌症资料
@@ -13,45 +21,127 @@
 
     <div style="clear: both"></div>
 
-    <div class="row"
-         style="height:600px;overflow-y:auto;background: url(/images/cancer/top.jpg) 50% 0% no-repeat;color:white;padding-top:60px;padding-left:40px;">
-        <div class="col-sm-6">
-            <div class="row text-center"><h2>了解病情情况</h2></div>
-            <div class="row" style="padding-left:5px;line-height:45px;font-size:16pt;border-bottom: 1px solid white">
-                {title}
-            </div>
-            <div class="row"
-                 style="font-weight:200;text-indent:20px;padding-left:5px;line-height:25px;font-size:12pt;border-bottom: 0px solid white">
-                <p> {desc|s}</p>
-            </div>
+    <div class="row">
+        <div class="col-sm-12  hidden-xs"
+             style="height:578px;background: url(/images/choose/background.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px">
+            <img src="/images/choose/background_xs.jpg" style="width:100%">
         </div>
     </div>
-    <div class="row" style="background: url(/images/cancer/background.jpg) 50% 0% repeat-y;">
-        <div class="row" style="min-height:400px;background: url(/images/cancer/end.jpg) 50% 0% no-repeat;color:white;">
-            <div class="col-sm-10">
-                <div class="row"
-                     style="margin-left:40px;line-height:45px;font-size:16pt;border-bottom: 1px solid white">
-                    治疗方案概述
+
+
+    <div class="row">
+        <div class="col-sm-12" style="height:328px;background: url(/images/choose/topicon.jpg) 50% 0% no-repeat;">
+            <form action="/choose/canceraz" method="get">
+                <div class="row text-center hidden-xs"
+                     style="height:100px;margin-top:150px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
+                    <div class="col-sm-6">
+                        1.癌症类型
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category1" name='t' style="width:200px;">
+                                <option value="no">请选择癌症类型</option>
+                                {#cancerCategory}
+                                    <option value="{_id}">{title}</option>
+                                {/cancerCategory}
+                            </select></div>
+                    </div>
+                    <div class="col-sm-6">
+                        2.癌症阶段
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_stage1" name="s" style="width:200px;">
+                                <option value="no">请选择癌症阶段</option>
+                                {#cancerStage}
+                                    <option value="{value}">{title}</option>
+                                {/cancerStage}
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row text-center" style="margin-top: 100px">
+                        <button class="lf_button_default" type="submit">查 阅</button>
+                    </div>
                 </div>
-                <div class="row"
-                     style="font-weight:200;text-indent:20px;padding-left:40px;line-height:25px;font-size:12pt;border-bottom: 0px solid white">
-                    <p> {treatment|s}</p>
+            </form>
+            <form action="/choose/canceraz" method="get">
+                <div class="row visible-xs" style="height:250px;padding-top: 120px">
+                    <div class="row text-center">
+                        1.癌症类型
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_category" name="t" style="width:200px;">
+                                <option value="no">请选择癌症类型</option>
+                                {#cancerCategory}
+                                    <option value="{_id}">{title}</option>
+                                {/cancerCategory}
+                            </select></div>
+                    </div>
+                    <div class="row  text-center" style="margin-top: 20px">
+                        2.癌症阶段
+                        <div class="lf_select" style="font-size: 11pt">
+                            <select id="cancer_stage" name="s" style="width:200px;">
+                                <option value="no">请选择癌症阶段</option>
+                                {#cancerStage}
+                                    <option value="{value}">{title}</option>
+                                {/cancerStage}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row text-center" style="margin-top: 50px">
+                        <button class="lf_button_default" type="submit">查 阅</button>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="row" style="margin-right:40px;margin-left:40px;font-size:13pt;border-top: 1px solid white">
-            <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/forum/index"> 连 接 </a></div>
-            <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/users/profile"> 比 较 </a></div>
-            <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "> <a class="lf_button_white" href="/users/center"> 决 定 </a></div>
-            <div class="col-sm-3 visible-xs" style="margin-top:50px"> <a href="/users/center" > <img src="/images/home/float_button.png" > </a></div>
-            <div class="col-sm-3 hidden-xs" style="margin-top:-50px"> <a href="/users/center"> <img src="/images/home/float_button.png" > </a></div>
+            </form>
 
         </div>
 
-        <div class="row">&nbsp;
+    </div>
 
+
+    <div class="row" id="#pro">
+        <h3>病理介绍</h3>
+        <div class="col-sm-10 col-sm-offset-1">
+        {cancer.desc|s}
         </div>
     </div>
+    <hr>
+    <div class="row">
+        <h3>治疗说明</h3>
+        </div>
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+
+        {cancer.treatment|s}
+            </div>
+    </div>
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row">&nbsp;</div>
+    <div class="row" style="margin-right:40px;margin-left:40px;font-size:13pt;border-top: 1px solid white;background-color:lightskyblue">
+
+        <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "><a class="lf_button_white" href="/forum/index">
+            连 接 </a></div>
+        <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "><a class="lf_button_white"
+                                                                           href="/users/profile"> 比 较 </a></div>
+        <div class="col-sm-2 col-sm-offset-1" style="margin:25px 15px "><a class="lf_button_white" href="/users/center">
+            决 定 </a></div>
+        <div class="col-sm-3 visible-xs" style="margin-top:50px"><a href="/users/center"> <img
+                src="/images/home/float_button.png"> </a></div>
+        <div class="col-sm-3 hidden-xs" style="margin-top:-20px"><a href="/users/center"> <img
+                src="/images/home/float_button.png"> </a></div>
+
+    </div>
+
+    <div class="row">&nbsp;</div>
+
+
+
+
+
+
 
 
 {/body}

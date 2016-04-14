@@ -5,6 +5,25 @@ var logger = require("../lib/log").sqllog;
 var _ = require("underscore");
 
 
+router.get("/richtext", function (req, res) {
+    var cancer = req.query.cancerType;
+    var stage = req.query.cancerStage;
+    var q = {cancerStage: stage, cancerType: cancer};
+
+    //var viewData = lifestar.cance_az.newModelData()[0];
+    var viewData = {};
+
+    viewData["layout"] = lifestar.resource.data.session(req.session.user);
+    lifestar.cancer_az.queryData(q, function (cancer) {
+
+        viewData["cancer"] = cancer[0];
+        logger.info(viewData);
+        res.render("admin/richtext", viewData);
+    }, function (err) {
+        res.render("admin/richtext", viewData);
+    });
+
+});
 router.get("/init/forumtopic", function (req, res) {
     lifestar.ForumTopics.initTopics();
     res.send("init forum topic use forumtopic.json");
@@ -33,16 +52,17 @@ router.get("/info", function (req, res) {
 router.post("/info", function (req, res) {
     var data = req.body;
     console.info(data);
-    var where = {cancerType:data.cancerType,cancerStage:data.cancerStage};
-    lifestar.cancer_az.updateDataWhere(where,data,function(){
+    var where = {cancerType: data.cancerType, cancerStage: data.cancerStage};
+    lifestar.cancer_az.updateDataWhere(where, data, function () {
         res.redirect("/admin/info");
-    },function(){
+    }, function () {
         res.redirect("/admin/info");
     });
 });
 router.get("/cancertype", function (req, res) {
     var viewData = {};
     viewData["layout"] = lifestar.resource.data.session(req.session.user);
+
 
     lifestar.CancerCategory.queryData({}, function (rtn) {
         viewData["category"] = rtn;
@@ -63,11 +83,21 @@ router.post("/cancertype", function (req, res) {
             res.redirect("/admin/cancertype");
         });
     } else {
-        lifestar.CancerCategory.updateData(data._id, data, function (rtn) {
-            res.redirect("/admin/cancertype");
-        }, function (err) {
-            res.redirect("/admin/cancertype");
-        });
+
+        if (data.title == "") {
+            lifestar.CancerCategory.deleteData({_id: data._id}, function (rtn) {
+                res.redirect("/admin/cancertype");
+            }, function (err) {
+                res.redirect("/admin/cancertype");
+            });
+        }
+        else {
+            lifestar.CancerCategory.updateData(data._id, data, function (rtn) {
+                res.redirect("/admin/cancertype");
+            }, function (err) {
+                res.redirect("/admin/cancertype");
+            });
+        }
     }
 });
 router.get("/topic", function (req, res) {
@@ -94,11 +124,23 @@ router.post("/topic", function (req, res) {
             res.redirect("/admin/topic");
         });
     } else {
-        lifestar.ForumTopics.updateData(data._id, data, function (rtn) {
-            res.redirect("/admin/topic");
-        }, function (err) {
-            res.redirect("/admin/topic");
-        });
+
+        if(data.title==""){
+            lifestar.ForumTopics.deleteData({_id:data._id}, function (rtn) {
+                res.redirect("/admin/topic");
+            }, function (err) {
+                res.redirect("/admin/topic");
+            });
+        }
+        else {
+
+
+            lifestar.ForumTopics.updateData(data._id, data, function (rtn) {
+                res.redirect("/admin/topic");
+            }, function (err) {
+                res.redirect("/admin/topic");
+            });
+        }
     }
 });
 

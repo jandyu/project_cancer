@@ -1,0 +1,110 @@
+{>layout_admin /}
+
+{<pagescript}
+
+
+    <link href="/bootstrap/editor/external/google-code-prettify/prettify.css" rel="stylesheet">
+
+
+    <link href="/bootstrap/editor/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="/bootstrap/editor/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/bootstrap/editor/font-awesome.css" rel="stylesheet">
+
+
+    <script src="/bootstrap/editor/external/jquery.hotkeys.js"></script>
+    <script src="/bootstrap/editor/external/google-code-prettify/prettify.js"></script>
+    <link href="/bootstrap/editor/index.css" rel="stylesheet">
+    <script src="/bootstrap/editor/bootstrap-wysiwyg.js"></script>
+    <script>
+        $(function () {
+            function initToolbarBootstrapBindings() {
+                var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+                            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+                            'Times New Roman', 'Verdana'],
+                        fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+                $.each(fonts, function (idx, fontName) {
+                    fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
+                });
+                $('a[title]').tooltip({container:'body'});
+                $('.dropdown-menu input').click(function () {
+                            return false;
+                        })
+                        .change(function () {
+                            $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+                        })
+                        .keydown('esc', function () {
+                            this.value = '';
+                            $(this).change();
+                        });
+
+                $('[data-role=magic-overlay]').each(function () {
+                    var overlay = $(this), target = $(overlay.data('target'));
+                    overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+                });
+                if ("onwebkitspeechchange" in document.createElement("input")) {
+                    var editorOffset = $('#editor').offset();
+                    $('#voiceBtn').css('position', 'absolute').offset({
+                        top: editorOffset.top,
+                        left: editorOffset.left + $('#editor').innerWidth() - 35
+                    });
+                } else {
+                    $('#voiceBtn').hide();
+                }
+            };
+            function showErrorAlert(reason, detail) {
+                var msg = '';
+                if (reason === 'unsupported-file-type') {
+                    msg = "Unsupported format " + detail;
+                }
+                else {
+                    console.log("error uploading file", reason, detail);
+                }
+                $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                        '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+            };
+           // initToolbarBootstrapBindings();
+            $('#editor').wysiwyg({fileUploadError: showErrorAlert});
+            $('#editor1').wysiwyg({fileUploadError: showErrorAlert});
+            window.prettyPrint && prettyPrint();
+        });
+    </script>
+{/pagescript}
+{<title}
+    text
+{/title}
+
+{<body}
+    <h3>介绍</h3>
+    <div id="editor" class="editor">
+        {cancer.desc|s}
+    </div>
+
+    <h3>治疗</h3>
+
+    <div id="editor1" class="editor">
+        {cancer.treatment|s}
+    </div>
+
+
+    <form action="/admin/info" method="post">
+        <input type="hidden" id='desc' name="desc">
+        <input type="hidden" id='treatment' name="treatment">
+        <input type="hidden" id="typeid" name="cancerType" value="{cancer.cancerType}">
+        <input type="hidden" id="stageid" name="cancerStage" value="{cancer.cancerStage}">
+
+    </form>
+    <div>
+        <button class="btn btn-primary" onclick="save()">保 存</button>
+    </div>
+
+    <script>
+        save = function () {
+            $("#desc").val($("#editor").html());
+            $("#treatment").val($("#editor1").html());
+            $("form").submit();
+        }
+    </script>
+{/body}
+
+
+

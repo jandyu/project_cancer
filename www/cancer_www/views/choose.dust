@@ -32,7 +32,7 @@
                             <select id="cancer_category" name='t' style="width:200px;">
                                 <option value="no">请选择癌症类型</option>
                                 {#cancerCategory}
-                                    <option value="{categoryID}">{title}</option>
+                                    <option value="{_id}">{title}</option>
                                 {/cancerCategory}
                             </select></div>
                     </div>
@@ -61,7 +61,9 @@
                         <div class="lf_select" style="font-size: 11pt">
                             <select id="cancer_category" name="t" style="width:200px;">
                                 <option value="no">请选择癌症类型</option>
-                                <option value="1">非小细胞癌症</option>
+                                {#cancerCategory}
+                                    <option value="{_id}">{title}</option>
+                                {/cancerCategory}
                             </select></div>
                     </div>
                     <div class="row  text-center" style="margin-top: 20px">
@@ -69,9 +71,9 @@
                         <div class="lf_select" style="font-size: 11pt">
                             <select id="cancer_category" name="s" style="width:200px;">
                                 <option value="no">请选择癌症阶段</option>
-                                <option value="1">I期</option>
-                                <option value="2">II期</option>
-                                <option value="3">III期</option>
+                                {#cancerStage}
+                                    <option value="{value}">{title}</option>
+                                {/cancerStage}
                             </select>
                         </div>
                     </div>

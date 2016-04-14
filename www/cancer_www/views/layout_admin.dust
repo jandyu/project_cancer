@@ -33,7 +33,7 @@
 <div class="container">
     {>topbar /}
 
-    <div class="row" style=" background: url(/images/forum/background.png) 50% 0% repeat-y;">
+    <div class="row" >
 
         <div class="col-sm-12" style="padding:5px;">
             {+body /}

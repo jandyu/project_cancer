@@ -13,13 +13,21 @@
         }
     </style>
     <script>
-        settype = function(id,title){
+        settype = function(obj,id,title){
             $("#typeid").val(id);
+            $(".typelst").removeClass("active");
+            $(obj).addClass("active");
 
         }
-        setstage= function(id,title){
+
+        setstage= function(obj,id,title){
             $("#stageid").val(id);
-            $('#myModal').modal('show');
+            $(".stagelst").removeClass("active");
+            $(obj).addClass("active");
+
+            if($("#typeid").val()!='0') {
+                $("form").submit();
+            }
         }
     </script>
 {/pagescript}
@@ -37,67 +45,32 @@
             </ul>
         </div>
     </div>
-    <div class="row" >
+    <div class="row">
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item active"  >癌症分类选择</li>
+                <li class="list-group-item active">1.请选择癌症分类</li>
                 {#category}
-                <li class="list-group-item" onclick="settype('{_id}','{title}')">{title}</li>
+                <li class="list-group-item typelst" onclick="settype($(this),'{_id}','{title}')">{title}</li>
                 {/category}
             </ul>
         </div>
 
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item active" >癌症阶段选择</li>
+                <li class="list-group-item active" >2.选择癌症阶段(选择后开始编辑)</li>
                 {#stage}
-                <li class="list-group-item" onclick="setstage('{value}','{title}')">{title}</li>
+                <li class="list-group-item stagelst" onclick="setstage($(this),'{value}','{title}')">{title}</li>
                 {/stage}
             </ul>
         </div>
 
     </div>
+    <form action="/admin/richtext" target="_blank" method="get" class="form-horizontal">
 
+            <input type="hidden" id="typeid" name="cancerType" value="0">
+            <input type="hidden" id="stageid" name="cancerStage" value="0">
+        </form>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="/admin/info" method="post" class="form-horizontal">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">癌症信息</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <input type="hidden" id="typeid" name="cancerType" value="0">
-                        <input type="hidden" id="stageid" name="cancerStage" value="0">
-
-
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">介绍: </label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control" id="desc" name="desc" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">治疗: </label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control" id="treatment" name="treatment" rows="5"></textarea>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取 消</button>
-                        <button type="submit" class="btn btn-primary">保 存</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
 {/body}
 

@@ -68,19 +68,29 @@ router.get("/lv3/:m?", function (req, res) {
 router.get("/choose/canceraz", function (req, res) {
     var cancer = req.query.t;
     var stage = req.query.s;
-    var q = {category: cancer, stage: stage};
+    var q = {cancerType: cancer};
 
     //var viewData = lifestar.cance_az.newModelData()[0];
+    var viewData = {};
 
-    //lifestar.cance_az.queryData(q,function(cancer){
-    //},function(err){
-    //});
-
-
-    var viewData = lifestar.cancer_az.newModelData()[0];
-    logger.info(viewData);
     viewData["layout"] = lifestar.resource.data.session(req.session.user);
-    res.render("canceraz", viewData);
+    viewData["cancerStage"] = lifestar.CancerStage.getStage();
+
+    lifestar.CancerCategory.queryData({},function(rtn) {
+        viewData["cancerCategory"] = rtn;
+        lifestar.cancer_az.queryData(q, function (cancer) {
+            viewData["cancer"] = cancer[0];
+            logger.info(viewData);
+            res.render("canceraz", viewData);
+        }, function (err) {
+            res.render("canceraz", viewData);
+        });
+    },function(){
+        res.render("canceraz", viewData);
+    });
+
+
+
 
 });
 
