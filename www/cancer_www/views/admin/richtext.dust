@@ -89,8 +89,8 @@
     <form action="/admin/info" method="post">
         <input type="hidden" id='desc' name="desc">
         <input type="hidden" id='treatment' name="treatment">
-        <input type="hidden" id="typeid" name="cancerType" value="{cancer.cancerType}">
-        <input type="hidden" id="stageid" name="cancerStage" value="{cancer.cancerStage}">
+        <input type="hidden" id="typeid" name="cancerType" value="{cancerType}">
+        <input type="hidden" id="stageid" name="cancerStage" value="{cancerStage}">
 
     </form>
     <div>

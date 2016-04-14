@@ -11,7 +11,7 @@ router.get("/richtext", function (req, res) {
     var q = {cancerStage: stage, cancerType: cancer};
 
     //var viewData = lifestar.cance_az.newModelData()[0];
-    var viewData = {};
+    var viewData = _.clone(q);
 
     viewData["layout"] = lifestar.resource.data.session(req.session.user);
     lifestar.cancer_az.queryData(q, function (cancer) {
