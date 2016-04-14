@@ -20,7 +20,7 @@
             <form action="/users/register" method="post">
                 <div class="form-group">
                     <label for="exampleInputEmail1">帐号</label>
-                    <input type="email" class="form-control" name="account"  placeholder="帐号名称/手机号码/Email地址">
+                    <input type="text" class="form-control" name="account"  placeholder="帐号名称/手机号码/Email地址">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">登录密码</label>

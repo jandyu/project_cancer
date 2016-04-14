@@ -31,7 +31,7 @@ app.set('view engine', 'dust');
 
 
 
-app.use(favicon());
+app.use(favicon(path.join(__dirname, 'fav.png')));
 
 //app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded());
@@ -65,10 +65,16 @@ app.use(function (req, res, next) {
         var authlist = ["/forum", "/users","/admin"];
         var allowlist = ["/users/login","/users/register","/forum/index"];
 
-        if(_.find(allowlist,function(item){return RegExp("^"+item).test(url);}) == undefined){
-            if(_.find(authlist,function(item){return RegExp("^"+item).test(url);}) !=undefined){
+        if(_.find(allowlist,function(item){return RegExp("^"+item,"i").test(url);}) == undefined){
+            if(_.find(authlist,function(item){return RegExp("^"+item,"i").test(url);}) !=undefined){
                 return res.redirect("/users/login?u="+url);
             }
+        }
+    }
+    else{
+        //admin
+        if(/^\/admin/i.test(url) && req.session.user.fullname!='admin'){
+            return res.redirect("/");
         }
     }
 
