@@ -21,7 +21,7 @@
                     url: "/users/passwd",
                     type: "post",
                     dataType: "text",
-                    data: '{ "oldpwd": "' + $("#oldpwd").val() + '", "newpwd": "' + $("#newpwd").val()  + '" }',
+                    data: '{ "oldpwd": "' + $("#oldpwd").val() + '", "newpwd": "' + $("#newpwd").val() + '" }',
                     contentType: "application/json",
                     error: function (err) {
                         $("#pwdinfo").html(err);
@@ -63,6 +63,11 @@
             <div class="row">
                 <a href="/users/profile"><h5>癌症康复者资料</h5></a>
             </div>
+            {@eq key=user.account value="admin"}
+                <div class="row">
+                    <a href="/admin/cancertype" target="_blank"><h5>后台管理员</h5></a>
+                </div>
+            {/eq}
 
 
         </div>
