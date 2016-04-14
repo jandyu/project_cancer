@@ -10,9 +10,30 @@
         }
     </style>
     <script>
-        login = function () {
-            $("form").submit();
+
+        resetpwd = function () {
+            if ($("#newpwd1").val() != $("#newpwd").val()) {
+                $("#pwdinfo").html("新密码两次输入不一样,请确认");
+            }
+            else {
+
+                $.ajax({
+                    url: "/users/passwd",
+                    type: "post",
+                    dataType: "text",
+                    data: '{ "oldpwd": "' + $("#oldpwd").val() + '", "newpwd": "' + $("#newpwd").val()  + '" }',
+                    contentType: "application/json",
+                    error: function (err) {
+                        $("#pwdinfo").html(err);
+                    },
+                    success: function (rtn) {
+                        $("#pwdinfo").html(rtn);
+                    }
+                });
+            }
         }
+
+
     </script>
 {/pagescript}
 {<title}
@@ -42,6 +63,7 @@
             <div class="row">
                 <a href="/users/profile"><h5>癌症康复者资料</h5></a>
             </div>
+
 
         </div>
         <div class="col-sm-10" style="padding-top:20px;background-color: white">
@@ -75,7 +97,7 @@
                             <label class="col-sm-2 control-label">性别</label>
 
                             <div class="col-sm-2">
-                                <select class="form-control" name="sex" >
+                                <select class="form-control" name="sex">
                                     <option value="M" {@eq key=sex value="M"}selected{/eq}>男</option>
                                     <option value="F" {@eq key=sex value="F"}selected{/eq}>女</option>
                                 </select>
@@ -99,6 +121,7 @@
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-offset-2 control-label">{info}</label>
+
                             <div class="col-sm-offset-4 col-sm-4">
                                 <button type="submit" class="col-sm-6 btn btn-primary">保 存</button>
                             </div>
@@ -108,6 +131,41 @@
                         </div>
                     {/user}
 
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <h4>密码修改</h4>
+
+                <form action="/users/passwd" method="post" class="form-horizontal" id="restpwd">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">原密码:</label>
+
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="oldpwd" name="oldpwd" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">新密码:</label>
+
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="newpwd" name="newpwd" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">确认密码:</label>
+
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" id="newpwd1" name="newpwd1" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-sm-offset-2 control-label" id="pwdinfo"></label>
+
+                        <div class="col-sm-offset-2 col-sm-3">
+                            <button type="button" onclick="resetpwd()" class="col-sm-6 btn btn-primary">保 存</button>
+                        </div>
+                    </div>
                 </form>
             </div>
             <hr>
@@ -124,7 +182,7 @@
                     </div>
                 {/loghistory}
             </div>
-            <div class="row" >&nbsp;</div>
+            <div class="row">&nbsp;</div>
         </div>
     </div>
 

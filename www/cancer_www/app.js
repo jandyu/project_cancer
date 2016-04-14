@@ -31,7 +31,7 @@ app.set('view engine', 'dust');
 
 
 
-app.use(favicon(path.join(__dirname, 'fav.png')));
+//app.use(favicon(path.join(__dirname, 'fav.png')));
 
 //app.use(bodyParser.json());
 //app.use(bodyParser.urlencoded());
@@ -73,7 +73,7 @@ app.use(function (req, res, next) {
     }
     else{
         //admin
-        if(/^\/admin/i.test(url) && req.session.user.fullname!='admin'){
+        if(/^\/admin/i.test(url) && req.session.user.username!='admin'){
             return res.redirect("/");
         }
     }

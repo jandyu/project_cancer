@@ -18,6 +18,34 @@ router.get('/login', function (req, res) {
 });
 
 
+
+
+router.post('/passwd', function (req, res) {
+    var uid = req.session.user.userid;
+
+    var newpwd = req.body.newpwd;
+    var oldpwd = req.body.oldpwd;
+
+    var log = {
+        _id: uid,
+        passwd: sha1(oldpwd)
+    }
+    lifestar.Users.doPromise(lifestar.Users.queryData, log).then(
+        function (rtn) {
+            if (rtn.length == 1) {
+                //update pwd
+                lifestar.Users.updateData(uid,{passwd:log.passwd},function(){
+                    res.send("密码修改成功");
+                },function(){
+                    res.send("密码修改失败");
+                });
+            }
+            else
+            {
+                res.send("原密码输入错误");
+            }
+        });
+});
 router.post('/login', function (req, res) {
 
     var rtnurl = req.body.url;
@@ -48,7 +76,7 @@ router.post('/login', function (req, res) {
 
                 lifestar.UsersLog.insertData(log,function(){},function(){});
 
-                req.session["user"] = {photo:rtn[0].photo,userid: rtn[0]._id, fullname: rtn[0].fullname, role: rtn[0].role};
+                req.session["user"] = {photo:rtn[0].photo,username:rtn[0].account,userid: rtn[0]._id, fullname: rtn[0].fullname, role: rtn[0].role};
 
                 //redirect
                 res.redirect((rtnurl == "") ? "/users/center" : rtnurl);
