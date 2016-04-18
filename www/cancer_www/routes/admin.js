@@ -92,7 +92,7 @@ router.post("/cancertype", function (req, res) {
             });
         }
         else {
-            lifestar.CancerCategory.updateData(data._id, data, function (rtn) {
+            lifestar.CancerCategory.updateData(data._id, {title:data.title}, function (rtn) {
                 res.redirect("/admin/cancertype");
             }, function (err) {
                 res.redirect("/admin/cancertype");
@@ -135,7 +135,7 @@ router.post("/topic", function (req, res) {
         else {
 
 
-            lifestar.ForumTopics.updateData(data._id, data, function (rtn) {
+            lifestar.ForumTopics.updateData(data._id, {desc:data.desc,category:data.category,title:data.title}, function (rtn) {
                 res.redirect("/admin/topic");
             }, function (err) {
                 res.redirect("/admin/topic");
