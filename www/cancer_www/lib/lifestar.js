@@ -395,7 +395,8 @@ var lifestar = {
                     {img: "/images/home/slide3.jpg", link: ""},
                     {img: "/images/home/slide4.jpg", link: ""},
                     {img: "/images/home/slide5.jpg", link: ""},
-                    {img: "/images/home/slide6.jpg", link: ""}
+                    {img: "/images/home/slide6.jpg", link: ""},
+                    {img: "/images/home/slide7.jpg", link: ""}
                 ],
                 succ: [
                     {
@@ -529,8 +530,8 @@ var lifestar = {
             travl: {
                 icon: "lf-icon-travl",
                 title: "星生命医疗旅游",
-                subtitle: "私人教练让你保持健康",
-                desc: "星生命可以安排您参观一些美国顶级的肿瘤医院，拜访知名的肿瘤科医生，请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约。",
+                subtitle: "健康导游助您安全畅游",
+                desc: "星生命可以安排您参观一些美国顶级的肿瘤医院，拜访知名的肿瘤科医生，请按如下方式联系星生命，我们将很热忱为您搜寻最佳方案，协助您进行必要的行程规划和诊疗预约。",
                 link: [{
                     icon: "lf-icon-small-tel",
                     title: "电话",

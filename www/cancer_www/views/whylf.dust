@@ -50,26 +50,26 @@
 
     <div class="row" style="padding-bottom:20px;background-color: rgb(160,255,255)">
         <div class="hidden-sm hidden-xs method" style="width:960px;margin-left: auto;margin-right: auto">
-            <a href="/connect">
+            <a href="/choose">
                 <div class="col-sm-3" style="width:230px;height:390px;background: url(/images/home/method1.jpg)">
-                    星生命会基于对您基本病情的了解，为您私人定制潜在的治疗方案。
+                    依据您提供的疾病信息，通过和您的单独交流，星生命会基于对您基本病情的了解，为您私人定制可能的治疗方案。
                 </div>
             </a>
-            <a href="/choose">
+            <a href="/support">
                 <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method2.jpg)">
-                    星生命可以帮助您获得国内外各种治疗方案的基本信息
-                    会员可以得到所有方案的详细信息.
+                    星生命可以帮助您获得国内外各种治疗方案的基本信息，会员可以得到所有方案的详细信息。通过我们的支持服务，您会获得更多的治疗机会。
+
 
                 </div>
             </a>
             <a href="/forum/index">
                 <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method3.jpg)">
                     星生命的论坛完全免费，欢迎患者和家人的共同加入，可以记录您的患病历程，分享您的诊治经验，病友之间，亲朋之间，勉励扶助，携同抗癌。
-                    通过我们的支持服务，您会获得更多的治疗机会.
+
 
                 </div>
             </a>
-            <a href="/support">
+            <a href="/users/center">
                 <div class="col-sm-3" style="width:230px;height:390px;margin-left:10px;background: url(/images/home/method4.jpg)">
                     星生命方案决定工具可以帮助您通过对比所有潜在治疗方案，或者和专家在线沟通筛选出个性化的最佳方案
 
@@ -80,21 +80,19 @@
             <div class="row method-xs">
                 <a href="/connect">
                     <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method1.jpg)">
-                        星生命会基于对您基本病情的了解，为您私人定制潜在的治疗方案。
+                        依据您提供的疾病信息，通过和您的单独交流，星生命会基于对您基本病情的了解，为您私人定制可能的治疗方案。
                     </div>
                 </a>
                 <a href="/choose">
                     <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method2.jpg)">
-                        星生命可以帮助您获得国内外各种治疗方案的基本信息
-                        会员可以得到所有方案的详细信息.
+                        星生命可以帮助您获得国内外各种治疗方案的基本信息，会员可以得到所有方案的详细信息。通过我们的支持服务，您会获得更多的治疗机会。
                     </div>
                 </a>
             </div>
             <div class="row method-xs" style="margin-top: 5px;">
                 <a href="/forum/index">
                     <div class="col-xs-6"style="padding:100px 1px 0px 1px;width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method3.jpg)">
-                        星生命的论坛完全免费，可以记录您的患病历程，分享您的诊治经验，病友之间，亲朋之间，勉励扶助，携同抗癌。
-                        您会获得更多的治疗机会.
+                        星生命的论坛完全免费，欢迎患者和家人的共同加入，可以记录您的患病历程，分享您的诊治经验，病友之间，亲朋之间，勉励扶助，携同抗癌。
                     </div>
                 </a>
                 <a href="/support">
