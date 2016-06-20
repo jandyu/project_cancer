@@ -425,9 +425,9 @@ var lifestar = {
             },
             support: {
                 link: [
-                   // {icon: 'lf-icon-usa', title: '健康咨询', href: '/lv3/second'},
-                    {icon: 'lf-icon-travl', title: '医疗旅游(美国)', href: '/lv3/travl'},
-                  //  {icon: 'lf-icon-test', title: '临床试验服务', href: '/lv3/test'},
+                    {icon: 'lf-icon-case', title: '健康咨询', href: '/lv3/second'},
+                    {icon: 'lf-icon-travl', title: '医疗旅游', href: '/lv3/travl'},
+                    {icon: 'lf-icon-test', title: '临床试验服务', href: '/lv3/test'},
                     {icon: 'lf-icon-look', title: '康复服务', href: '/lv3/health1'},
                   //  {icon: 'lf-icon-case', title: '病案管理服务', href: '/lv3/case'},
                 ]
@@ -506,7 +506,7 @@ var lifestar = {
                 icon: "lf-icon-test",
                 title: "星生命临床试验",
                 subtitle: "私人教练让你保持健康",
-                desc: "星生命可安排您加入全球最新的临床试验目前很多新药临床试验仍然有国家和区域的限制，如果您希望尝试最新的抗肿瘤药物，我们的专家团队可以依据您提供的详细病情资料，先初步为您筛选可能参与的项目，再根据您的反馈意原和补充的治疗资料，为您仔细挑选最有可能被招募上的临床试验，最后还可以帮助您直接沟通问询具体相关事宜。请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约。",
+                desc: "星生命可安排您加入全球最新的临床试验。目前很多新药临床试验仍然有国家和区域的限制，如果您希望尝试最新的抗肿瘤药物，我们的专家团队可以依据您提供的详细病情资料，先初步为您筛选可能参与的项目，再根据您的反馈意原和补充的治疗资料，为您仔细挑选最有可能被招募上的临床试验，最后还可以帮助您直接沟通问询具体相关事宜。请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约。",
                 link: [{
                     icon: "lf-icon-small-tel",
                     title: "电话",
@@ -531,7 +531,7 @@ var lifestar = {
                 icon: "lf-icon-travl",
                 title: "星生命医疗旅游",
                 subtitle: "健康导游助您安全畅游",
-                desc: "星生命可以安排您参观一些美国顶级的肿瘤医院，拜访知名的肿瘤科医生，请按如下方式联系星生命，我们将很热忱为您搜寻最佳方案，协助您进行必要的行程规划和诊疗预约。",
+                desc: "星生命可以安排您参观一些美国和香港顶级的肿瘤医院，拜访知名的肿瘤科医生，请按如下方式联系星生命，我们将很热忱为您搜寻最佳方案，协助您进行必要的行程规划和诊疗预约。",
                 link: [{
                     icon: "lf-icon-small-tel",
                     title: "电话",

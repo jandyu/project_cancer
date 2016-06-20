@@ -118,12 +118,12 @@
         <div class="visible-xs-block visible-sm-block " style="max-width:360px;margin-left: auto;margin-right: auto">
             <div class="row method-xs">
                 <a href="/choose">
-                <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method1.jpg)">
+                <div class="col-xs-6"style="width:150px;height:290px;margin-left:10px;background-size: 150px 295px; padding-top: 115px;background-image: url(/images/home/method1.jpg)">
                     依据您提供的疾病信息，通过和您的单独交流，星生命会基于对您基本病情的了解，为您私人定制可能的治疗方案。
                 </div>
                 </a>
                 <a href="/supper">
-                <div class="col-xs-6"style="width:150px;height:250px;margin-left:10px;background-size: cover; background-image: url(/images/home/method2.jpg)">
+                <div class="col-xs-6"style="width:150px;height:290px;margin-left:10px;background-size: 150px 295px; padding-top: 115px; background-image: url(/images/home/method2.jpg)">
                     星生命可以帮助您获得国内外各种治疗方案的基本信息，会员可以得到所有方案的详细信息。通过我们的支持服务，您会获得更多的治疗机会。
                 </div>
                 </a>
