@@ -34,7 +34,7 @@
 
     <div class="row">
         <div class="col-sm-12" style="height:328px;background: url(/images/choose/topicon.jpg) 50% 0% no-repeat;">
-            <form action="/choose/canceraz" method="get">
+            <form action="/users/canceraz" method="get">
                 <div class="row text-center hidden-xs"
                      style="height:100px;margin-top:150px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
                     <div class="col-sm-6">
@@ -54,7 +54,7 @@
 
                 </div>
             </form>
-            <form action="/choose/canceraz" method="get">
+            <form action="/users/canceraz" method="get">
                 <div class="row visible-xs" style="height:250px;padding-top: 120px">
                     <div class="row text-center">
                         癌症类型
