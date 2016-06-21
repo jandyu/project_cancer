@@ -40,11 +40,12 @@
     <div class="row">
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item active" onclick="edit('0','')">增加新主题</li>
+                <li class="list-group-item active">癌症讨论主题</li>
                 {#topic}
                     <li class="list-group-item" onclick="edit('{_id}','{title}','{desc}','{category}')">{category} - {title}</li>
 
                 {/topic}
+                <li class="list-group-item"  style="background-color: #dff0d8" onclick="edit('0','')">增加...</li>
             </ul>
         </div>
 

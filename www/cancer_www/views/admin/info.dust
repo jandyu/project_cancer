@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item active">1.请选择癌症分类</li>
+                <li class="list-group-item">step 1.请选择癌症分类</li>
                 {#category}
                 <li class="list-group-item typelst" onclick="settype($(this),'{_id}','{title}')">{title}</li>
                 {/category}
@@ -57,7 +57,7 @@
 
         <div class="col-sm-3">
             <ul class="list-group">
-                <li class="list-group-item active" >2.选择癌症阶段(选择后开始编辑)</li>
+                <li class="list-group-item" >step 2.选择癌症资料分类编辑</li>
                 {#stage}
                 <li class="list-group-item stagelst" onclick="setstage($(this),'{value}','{title}')">{title}</li>
                 {/stage}

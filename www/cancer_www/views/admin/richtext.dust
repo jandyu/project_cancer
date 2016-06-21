@@ -74,16 +74,12 @@
 {/title}
 
 {<body}
-    <h3>介绍</h3>
+    <h3>{cancerTitle}</h3>
     <div id="editor" class="editor">
         {cancer.desc|s}
     </div>
 
-    <h3>治疗</h3>
 
-    <div id="editor1" class="editor">
-        {cancer.treatment|s}
-    </div>
 
 
     <form action="/admin/info" method="post">
@@ -100,7 +96,7 @@
     <script>
         save = function () {
             $("#desc").val($("#editor").html());
-            $("#treatment").val($("#editor1").html());
+           // $("#treatment").val($("#editor1").html());
             $("form").submit();
         }
     </script>

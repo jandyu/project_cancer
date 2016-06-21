@@ -677,6 +677,16 @@ var lifestar = {
         getStage: function () {
             return this.newModelData();
         }
+    }),
+    CancerResource: _.extend(_.extend({}, dal), {
+        "collectionName": "CancerResource", "modelName": "Cancerresource",
+        getResList: function () {
+            return this.newModelData();
+        },
+        getResourceName: function (id) {
+            var lst = this.newModelData();
+            return _.find(lst,function(item){return item.value==id});
+        }
     })
 
 
