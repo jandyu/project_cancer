@@ -70,7 +70,7 @@
     </script>
 {/pagescript}
 {<title}
-    text
+   {cancerTitle}
 {/title}
 
 {<body}

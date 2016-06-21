@@ -233,4 +233,36 @@ router.post("/profile",function(req,res){
 
 });
 
+
+
+
+router.get("/canceraz", function (req, res) {
+    var cancer = req.query.t;
+    var stage = req.query.s;
+    var q = {cancerType: cancer,cancerStage:stage};
+
+    //var viewData = lifestar.cance_az.newModelData()[0];
+    var viewData = {};
+
+    viewData["layout"] = lifestar.resource.data.session(req.session.user);
+    viewData["cancerStage"] = lifestar.CancerStage.getStage();
+
+    lifestar.CancerCategory.queryData({},function(rtn) {
+        viewData["cancerCategory"] = rtn;
+        lifestar.cancer_az.queryData(q, function (cancer) {
+            viewData["cancer"] = cancer[0];
+            logger.info(viewData);
+            res.render("cancerazuser", viewData);
+        }, function (err) {
+            res.render("cancerazuser", viewData);
+        });
+    },function(){
+        res.render("cancerazuser", viewData);
+    });
+
+
+
+
+});
+
 module.exports = router;

@@ -68,7 +68,7 @@ router.get("/lv3/:m?", function (req, res) {
 router.get("/choose/canceraz", function (req, res) {
     var cancer = req.query.t;
     var stage = req.query.s;
-    var q = {cancerType: cancer};
+    var q = {cancerType: cancer,cancerStage:stage};
 
     //var viewData = lifestar.cance_az.newModelData()[0];
     var viewData = {};
