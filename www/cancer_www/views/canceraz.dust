@@ -7,7 +7,7 @@
             $("#cancer_category").val('{cancer.cancerType}');
             $("#cancer_stage1").val('{cancer.cancerStage}');
             $("#cancer_stage").val('{cancer.cancerStage}');
-            $(document).scrollTop(800);
+            $(document).scrollTop(700);
         });
     </script>
 {/pagescript}
@@ -34,9 +34,11 @@
 
     <div class="row">
         <div class="col-sm-12" style="height:328px;background: url(/images/choose/topicon.jpg) 50% 0% no-repeat;">
+            <div class="row text-center" style="height:140px;line-height:140px;color:white;font-size: 14pt">星生命带您从这里开始了解癌症</div>
+
             <form action="/choose/canceraz" method="get">
                 <div class="row text-center hidden-xs"
-                     style="height:100px;margin-top:150px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
+                     style="height:100px;margin-top:50px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
                     <div class="col-sm-6">
                         癌症类型
                         <div class="lf_select" style="font-size: 11pt">

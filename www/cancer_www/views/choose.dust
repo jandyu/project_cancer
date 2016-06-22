@@ -23,11 +23,12 @@
     </div>
     <div class="row">
         <div class="col-sm-12" style="height:328px;background: url(/images/choose/topicon.jpg) 50% 0% no-repeat;">
+            <div class="row text-center" style="height:140px;line-height:140px;color:white;font-size: 14pt">星生命带您从这里开始了解癌症</div>
             <form action="/choose/canceraz" method="get">
                 <div class="row text-center hidden-xs"
-                     style="height:100px;margin-top:150px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
+                     style="height:100px;margin-top:50px;max-width:800px;margin-left: auto;margin-right: auto;font-size:18pt;color:rgb(0,54,100)">
                     <div class="col-sm-6">
-                        1.癌症类型
+                        癌症类型
                         <div class="lf_select" style="font-size: 11pt">
                             <select id="cancer_category" name='t' style="width:200px;">
                                 <option value="no">请选择癌症类型</option>
@@ -35,22 +36,10 @@
                                     <option value="{_id}">{title}</option>
                                 {/cancerCategory}
                             </select></div>
+                        <input type="hidden" name="s" value="1">
                     </div>
                     <div class="col-sm-6">
-                        2.癌症阶段
-                        <div class="lf_select" style="font-size: 11pt">
-                            <select id="cancer_category" name="s" style="width:200px;">
-                                <option value="no">请选择癌症阶段</option>
-                                {#cancerStage}
-                                    <option value="{value}">{title}</option>
-                                {/cancerStage}
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row text-center" style="margin-top: 100px">
-                        <button class="lf_button_default" type="submit">决 定</button>
+                        <button class="lf_button_default" type="submit">查 看</button>
                     </div>
                 </div>
             </form>
@@ -65,21 +54,12 @@
                                     <option value="{_id}">{title}</option>
                                 {/cancerCategory}
                             </select></div>
-                    </div>
-                    <div class="row  text-center" style="margin-top: 20px">
-                        2.癌症阶段
-                        <div class="lf_select" style="font-size: 11pt">
-                            <select id="cancer_category" name="s" style="width:200px;">
-                                <option value="no">请选择癌症阶段</option>
-                                {#cancerStage}
-                                    <option value="{value}">{title}</option>
-                                {/cancerStage}
-                            </select>
-                        </div>
+                        <input type="hidden" name="s" value="1">
                     </div>
 
+
                     <div class="row text-center" style="margin-top: 50px">
-                        <button class="lf_button_default" type="submit">决 定</button>
+                        <button class="lf_button_default" type="submit">查 看</button>
                     </div>
                 </div>
             </form>
