@@ -679,7 +679,7 @@ var lifestar = {
         }
     }),
     CancerResource: _.extend(_.extend({}, dal), {
-        "collectionName": "CancerResource", "modelName": "Cancerresource",
+        "collectionName": "CancerResource", "modelName": "cancerresource",
         getResList: function () {
             return this.newModelData();
         },
