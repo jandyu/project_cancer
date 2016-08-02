@@ -457,22 +457,17 @@ var lifestar = {
                 title: "星生命专家",
                 subtitle: "私人专家让你保持健康",
                 desc: "星生命专家员是训练有素的领航员，他们会耐心的解答您的癌症相关问题，快速引导您从我们的网站获得必需信息，或者帮助您浏览其他来源的信息。他们还将告诉您如何通过我们的网络咨询或电话咨询服务获得更详细的资讯，进而协助您联系到我们优质的海外服务。",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
-                    time: "8 am – 10 pm"
-                },
+                link: [
                     {
                         icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
+                        title: "微信联系",
+                        desc: "微信联系",
                         time: "8 am – 10 pm"
                     },
                     {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
@@ -482,22 +477,16 @@ var lifestar = {
                 title: "星生命健康咨询",
                 subtitle: "星生命健康咨询",
                 desc: "依据您提供的疾病信息，通过和您的单独交流，星生命会基于对您基本病情的了解，为您筛寻最佳的潜在治疗方案。我们提供网络咨询、电话咨询、单独咨询。如果您对向中国或美国的肿瘤学专家深入咨询感兴趣，请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约。",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
+                link: [ {
+                    icon: "lf-icon-small-txt",
+                    title: "微信联系",
+                    desc: "微信联系",
                     time: "8 am – 10 pm"
                 },
                     {
-                        icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
-                        time: "8 am – 10 pm"
-                    },
-                    {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
@@ -507,22 +496,16 @@ var lifestar = {
                 title: "星生命临床试验",
                 subtitle: "私人教练让你保持健康",
                 desc: "星生命可安排您加入全球最新的临床试验。目前很多新药临床试验仍然有国家和区域的限制，如果您希望尝试最新的抗肿瘤药物，我们的专家团队可以依据您提供的详细病情资料，先初步为您筛选可能参与的项目，再根据您的反馈意原和补充的治疗资料，为您仔细挑选最有可能被招募上的临床试验，最后还可以帮助您直接沟通问询具体相关事宜。请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约。",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
+                link: [ {
+                    icon: "lf-icon-small-txt",
+                    title: "微信联系",
+                    desc: "微信联系",
                     time: "8 am – 10 pm"
                 },
                     {
-                        icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
-                        time: "8 am – 10 pm"
-                    },
-                    {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
@@ -532,22 +515,16 @@ var lifestar = {
                 title: "星生命医疗旅游",
                 subtitle: "健康导游助您安全畅游",
                 desc: "星生命可以安排您参观一些美国和香港顶级的肿瘤医院，拜访知名的肿瘤科医生，请按如下方式联系星生命，我们将很热忱为您搜寻最佳方案，协助您进行必要的行程规划和诊疗预约。",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
+                link: [ {
+                    icon: "lf-icon-small-txt",
+                    title: "微信联系",
+                    desc: "微信联系",
                     time: "8 am – 10 pm"
                 },
                     {
-                        icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
-                        time: "8 am – 10 pm"
-                    },
-                    {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
@@ -557,22 +534,16 @@ var lifestar = {
                 title: "星生命家庭护理和康复服务",
                 subtitle: "私人教练让你保持健康",
                 desc: "星生命可提供家庭护理和康复服务:电话康复服务,康复,营养䃼充,太极拳,针灸.请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
+                link: [ {
+                    icon: "lf-icon-small-txt",
+                    title: "微信联系",
+                    desc: "微信联系",
                     time: "8 am – 10 pm"
                 },
                     {
-                        icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
-                        time: "8 am – 10 pm"
-                    },
-                    {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
@@ -582,22 +553,16 @@ var lifestar = {
                 title: "病案管理服务",
                 subtitle: "私人教练让你保持健康",
                 desc: "星生命可提供病案管理服务,请按如下方式联系星生命，我们将很乐意为您找到最佳方案，并且帮助您进行必要的规划预约",
-                link: [{
-                    icon: "lf-icon-small-tel",
-                    title: "电话",
-                    desc: "86-9999-0987",
+                link: [ {
+                    icon: "lf-icon-small-txt",
+                    title: "微信联系",
+                    desc: "微信联系",
                     time: "8 am – 10 pm"
                 },
                     {
-                        icon: "lf-icon-small-txt",
-                        title: "消息/语音/文字",
-                        desc: "86-9999-0987",
-                        time: "8 am – 10 pm"
-                    },
-                    {
                         icon: "lf-icon-small-email",
-                        title: "电子邮件",
-                        desc: "86-9999-0987",
+                        title: "xingshenging@outlook.com",
+                        desc: "邮箱联系",
                         time: "12小时回复"
                     }]
 
