@@ -33,6 +33,44 @@
             }
         }
 
+        function upload(){
+            UploadFile("uploadfile",function(u){
+                $("#headphoto").attr("src",u);
+                $("#userphoto").val(u);
+                $("#baseinfo").submit();
+            })
+        }
+
+        function UploadFile(fileid, callback) {
+            var flist = $("#" + fileid).get(0).files;
+            var fileObj = flist[0]; //
+
+            var	maxsize = 1000000; //1M
+            if (fileObj.size > maxsize) {
+                callback("-1:" + "图片尺寸太大" + (maxsize / 1000000) + "M!");
+                return;
+            }
+
+            var FileController = "/upload/head";
+            // FormData 瀵硅薄
+            var form = new FormData();
+            form.append("file", fileObj);                           // 鏂囦欢瀵硅薄
+            // XMLHttpRequest 瀵硅薄
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", FileController, true);
+
+            xhr.onload = function (rtn) {
+                console.info(rtn.target);
+                if (callback != null) {
+                    callback(rtn.target.responseText);
+                }
+                else{
+                    $("#currimg").attr("src",imgPrefix+d.url);
+                }
+            };
+            xhr.send(form);
+        }
+
 
     </script>
 {/pagescript}
@@ -52,7 +90,20 @@
         <div class="col-sm-2" style="padding-top:20px;background-color: rgb(250,251,252)">
 
             <div class="row text-center" style="height:100px;border-bottom: 0px;">
-                <img src="{user.photo}" style="width:100px">
+                <div><img id="headphoto" src="{user.photo}" style="width:100px"></div>
+                <input type="file" onchange="upload()" id="uploadfile" style="
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 30px;
+    outline: medium none;
+    position: absolute;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity:0;
+    left:20px;
+    top: 20px;"
+                >
             </div>
             <div class="row">
                 {user.fullname}
@@ -75,7 +126,7 @@
             <div class="row" style="border-bottom: 0px solid white;height:auto">
                 <h4>用户资料</h4>
 
-                <form action="/users/center" method="post" class="form-horizontal">
+                <form id="baseinfo" action="/users/center" method="post" class="form-horizontal">
                     {#user}
                         <div class="form-group">
                             <label class="col-sm-2 control-label">帐号</label>
@@ -88,6 +139,8 @@
                             <div class="col-sm-2">
                                 <input type="text" class="form-control" name="fullname" placeholder="姓名"
                                        value="{fullname}">
+
+                                <input type="hidden" id="userphoto" name="photo" value="{photo}">
                             </div>
                         </div>
 

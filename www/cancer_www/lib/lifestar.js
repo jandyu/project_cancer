@@ -346,6 +346,7 @@ var lifestar = {
                     {title: "向别人学习", link: "/connect"},
                     {title: "支持服务", link: "/support"},
                     {title: "星生命故事", link: "/story"},
+                    {title: "我们的团队", link: "/team"},
                     {title: "登录", link: "/users/login"},
                     {title: "用户信息", link: "/users/center"}
                 ],
@@ -433,6 +434,101 @@ var lifestar = {
                 ]
             },
             story: {},
+            team:{
+                persons:[
+                    {photo:"/images/team/ian.jpg",fullName:"Dr.Ian Hau",position:"Board Chairman",zh_name:"董事长",
+                        profile:{
+                            en:[
+                                'An internationally recognized expert in the field of process improvement, analytics, and Healthcare IT with over 30 years of experience. ',
+                                'Founder of Orchestrall, winner of Philly 100 for 2013, 2014.',
+                                'Director of Smart Healthy City Alliance',
+                                'Contracted President for Genesis Rehabilitation Services China',
+                                'Previously served as SVP at Global Technology,  VP in Project and Process Management, and VP for R&D Portfolio Analytics for GlaxoSmithKline',
+                                'He has developed and published the Fast Cycle Improvement methodology which has been adopted by several well known organizations such as University of Berkeley, University of Wisconsin & Penn State University.',
+                                'Prior to joining GlaxoSmithKline, Dr. Hau was Assistant Professor at the Graduate School of Business and Research Fellow at the Center for Quality and Productivity Improvement at the University of Wisconsin-Madison '
+                            ],
+                            zh:[
+                                '国际公认的医药健康资讯界专家，在信息科技的程序优化和分析领域拥有超过30年的经验。',
+                                '美国Orchestrall医药健康资讯公司的创始人，2013年和2014年美国费城百家最有潜力公司的获得者。',
+                                '美国智能健康城市联盟（ Smart Healthy City Alliance ）的总监',
+                                '美国创世纪康复医疗服务公司（GRS）中国区总裁',
+                                '此前曾长期担任葛兰素史克（GlaxoSmithKline）公司全球技术部高级副总裁，项目和流程管理部副总裁，以及项目研发投资组合分析部的副总裁',
+                                '在加入葛兰素史克前， Dr. Ian Hau是美国威斯康星-麦迪逊大学工商管理研究生院副教授，质量和产量改善研究中心研究员。他的快速循环改进的方法学理论，已经被多家著名学术机构，如伯克利大学、威斯康星州立大学和宾夕法尼亚州立大学所采纳。'
+                            ]
+                        }
+                    },
+                    {photo:"/images/team/john.jpg",fullName:"Dr.Joh Balian",position:"Board Member",zh_name:"董事",
+                        profile:{
+                            en:[
+                                'Dr. Balian is an Internist and Clinical Pharmacologist and is the former Chief Medical Officer and Chief R&D Operations Officer of Johnson & Johnson FCC. He also has served as a Senior Executive at Pfizer Inc and Bristol-Myers Squibb, all major health care, multinational corporations. Before joining the industry, Dr. Balian served for 5 years at the USFDA. He recently founded MediVista Consulting, LLC.  ',
+                                'Dr. Balian received his BA from Columbia University in New York and MD degree form Tufts University School of Medicine in Boston. He serves on the board of Columbia University Armenian Center and Scientific Advisory Board of the China Smart Healthy City Association, and, Jubeln, Pharmiva, and Sonzia corporations among others. He is published widely in trade journals and is the author of an acclaimed novel “Gray Wolves and White Doves.”'
+                            ],
+                            zh:[
+                                'Dr. John D. Balian是一位内科医生和临床药理学家，前强生（Johnson & Johnson）公司医药部主任和研发部主任。也曾担任辉瑞制药（Pfizer Inc ）和百时美施贵宝（Bristol-Myers Squibb) 高级主管。进入医药跨国公司前，他还在美国食品与药品管理局（FDA）任职 5 年，最近他创立了MediVista 健康咨询公司。',
+                                'Dr. John D. Balian在哥伦比亚大学获得学士学位后继续在波士顿塔夫茨大学（ Tufts University ）医学院获得医学博士学位。现任哥伦比亚大学亚美尼亚中心和中国智能健康城市协会（China Smart Healthy City Association），以及Jubeln、Pharmiva、Sonzia 等公司机构的科学顾问。 Dr. John D. Balian兴趣爱好广泛，不仅在期刊杂志上发表大量专业文章，同时还是著名的小说“灰狼与白鸽”的作者。',
+                            ]
+                        }
+                    },
+                    {photo:"/images/team/neal.jpg",fullName:"Dr.Neal Naito Hau",position:"Clinical Board",zh_name:"董事(临床部)",
+                        profile:{
+                            en:[
+                                'Dr. Naito is an Occupational Medicine/Internal Medicine specialist who was previously the Director of Public Health for the U.S. Navy. In that capacity, he developed and managed a multimillion dollar program portfolio in military medicine, mental health, clinical medicine, tropical infectious diseases, and pandemic planning. Currently, he does extensive healthcare consulting in the area of innovative service delivery models.'
+                ],
+                            zh:[
+                                '职业医学和内科学医师，前美国海军公共卫生部主任。',
+                                '任职期间，他统筹管理军事医学、心理健康、临床医学、热带传染病和流行病控制的数百万美元的整体项目方案。',
+                                '目前Dr. Naito专注于医疗健康咨询服务的模式创新，并拥有丰富的服务经验。'
+                            ]
+                        }
+                    },
+                    {photo:"/images/team/fan.jpg",fullName:"Fan Zhou",position:"Marketing",zh_name:"市场部经理",
+                        profile:{
+                            en:[
+                                'Studied in Jiangxi Agriculture University in electronic engineering major and received his BA from Temple University Fox School of Business and Management in Accounting and Finance major. ',
+                                'Established TiaoXing Entertainment limited Company in Jiangxi Agriculture University when he was 17 in 2006. TiaoXing Entertainment dominated entertainment market in Jiangxi Agriculture University in 2007. ',
+                                'Before coming to the US, Mr. Zhou worked in Sunrise Capital International, Inc in Guangzhou as Managing Partner’s(Sam Zhou) Assistant. When he was working in Sunrise Capital, he participated Agfeed Industries’ IPO which was the first Asian agricultural company trading in NASDAQ.'
+                            ],
+                            zh:[
+                                '美国Temple大学福克斯商学院金融会计专业学士',
+                                '在2006年（年仅17岁）创立跳星娱乐有限公司，主宰了江西农业大学娱乐市场。',
+                                '曾担任Sunrise国际资本公司执行合伙人 Mr. Sam Zhou的助理，任职期间，他参与了艾格菲工业（ Agfeed Industries ）公司的IPO，这是成功在纳斯达克上市的第一家亚洲农业公司。'
+                            ]
+                        }
+                    },
+                    {photo:"/images/team/franky.jpg",fullName:"Franky Choi",position:"Board Member",zh_name:"执行董事",
+                        profile:{
+                            en:[
+                                'Franky Choi is an IT executive with 25 years of experience in Program Management, Application Development, and Lean Six Sigma serving as Senior Program Director at GlaxoSmithKline, a major health care multinational corporation. Franky has experience developing health related websites, mobile web, and apps. He also has international experience leading the technology programs for GSK’s Shanghai R&D center and Asia HQ in Singapore.'
+                            ],
+                            zh:[
+                                'IT主管，在项目管理、应用程序开发和精益六西格玛管理方面有25年的丰富经验。',
+                                '长期担任葛兰素史克公司的高级项目总监，在开发与健康有关的网站，移动网站和程序应用。',
+                                'Mr. Franky Choi曾经领导葛兰素史克公司的上海研发中心和新加坡亚洲总部的技术部门。'
+                            ]
+                        }
+                    },
+                    {photo:"/images/team/antican.jpg",fullName:"Dr.Antican Wang",position:"Oncology",zh_name:"肿瘤学顾问",
+                        profile:{
+                            en:[
+                                'A scholar of translational medicine in American, with over 10 years of experience in Oncology research.',
+                                'Dr. Wang received his Bachelor of Pharmacy , Master of Radiation Medicine and PhD of Oncology from Chinese Academy of Medical Sciences & Peking Union Medical College.',
+                                'He has worked in the Cancer Hospital and Institute of Chinese Academy of Medical Sciences, mainly engaged in studying the origin of cancer stem cells and the potential of stem cells in the treatment of cancer.',
+                                'In United States, he dedicated to the translational research and preclinical trials of immunotherapy for lung cancer, focused on the effects of genetic alterations of NIT1, IGFBP3, PD-1 and PD-L1 on Kras mutations in lung cancer, as well as preclinical studies of radiation enhancement of targeted therapy.',
+                                'Because of aging society, pollution, increased survival and mental stress, China will have more cancer patients in the future. However, there still a long way to go from bench to bedside, and many other reasons greatly limiting Chinese patients to receive new treatments or clinical trials. So Dr. Wang hope can improve the survival and quality of life of Chinese cancer patients by providing basic and up-to-date information on clinical trials, and also to promote the rapid translation of Oncology Research.'
+
+                            ],
+                            zh:[
+                                '旅美肿瘤学转化医学学者，具有10多年的肿瘤学研究经验。',
+                                '获得药学学士后，又在中国医学科学院协和医科大学获得放射医学硕士和肿瘤学博士学位。',
+                                '在中国医学科学院肿瘤研究所学习工作期间，主要从事肿瘤的干细胞起源和肿瘤的干细胞治疗研究。',
+                                '在美国主要从事肺癌的基因突变基础研究和免疫治疗的临床试验转化研究，探讨了NIT1, IGFBP3, PD-1和PD-L1基因的改变对Kras突变肺癌的形成和治疗的影响。目前主要从事肺癌的纳米颗粒放疗制剂对于免疫抑制治疗的协同作用，以及肺癌靶向治疗药物的放射增敏临床前研究。',
+                                'Dr. Antican Wang认为由于中国环境污染的恶化和生存及精神压力的增大，随着中国人口老龄化，未来将会有更多的癌症患者。然而基础肿瘤学的研究成果距离临床转化应用还有很长的路要走，还有很多其他原因，极大的限制了中国的癌症患者获得新的治疗方法和参与药物临床试验。因此Dr. Antican Wang将致力于通过为癌症患者提供基础和临床试验的最新信息，来促进肿瘤学研究成果的转化，提高中国癌症患者的生存率和生活质量。'
+                            ]
+                        }
+                    }
+
+                ]
+            },
             session: function (user) {
                 logger.info(user);
                 if (!user) return this.layout;
@@ -444,6 +540,7 @@ var lifestar = {
                         {title: "向别人学习", link: "/connect"},
                         {title: "支持服务", link: "/support"},
                         {title: "星生命故事", link: "/story"},
+                        {title: "我们的团队", link: "/team"},
                         {title: "注 销", link: "/users/login?o=1"},
                         {title: user.fullname, link: "/users/center"}
                     ],

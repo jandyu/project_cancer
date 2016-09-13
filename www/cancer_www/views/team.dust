@@ -1,0 +1,74 @@
+{>layout /}
+
+{<pagescript}
+<style>
+    p{
+        font-size: 110%;
+        line-height: 30px;;
+    }
+</style>
+{/pagescript}
+{<title}
+    Our team
+{/title}
+
+{<body}
+
+    <div style="clear: both"></div>
+
+    <div class="row">
+        <div class="col-sm-12 hidden-xs" style="height:578px;background: url(/images/team/team.jpg) 50% 0% no-repeat;">
+            &nbsp;
+        </div>
+        <div class="col-sm-12  visible-xs" style="padding:0px" >
+            <img src="/images/team/team-s.jpg" style="width:100%">
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+        <p style="text-indent: 20px;">
+            We are passionate about helping cancer patients in China by facilitating access to the best cancer treatments around the world. Our team is experienced in health care and understands cancer care in China. We provide the most up-to-date evidence based knowledge about the disease, treatment options, and survivors care as well as facilitating the online support community. It’s no small task. But we wouldn’t want it any other way, see Appendix for bio of team members.
+
+        </p>
+        <p></p>
+        <p style="text-indent: 20px;">
+            我们的团队致力于帮助中国的癌症患者获得国际上最有价值的治疗资讯，我们既有丰富的国际医疗经验，又了解中国癌症治疗的实际需求。我们不仅提供最新的肿瘤相关的循证医学信息、可选治疗方案和肿瘤康复全方位的服务，还通过在线社区为癌症患者提供沟通互助的平台。无论您是肿瘤患者和陪护家属，还是专业医师和护理人员，或是卫生健康相关领域的任何从业人员和商务人事，我们都诚挚的邀请您与星生命，共同努力，抗击癌症，为中国的肿瘤患者们提供新机会，寻找新希望，开启星生命。
+
+        </p>
+        </div>
+    </div>
+
+    <p></p>
+
+    {#persons}
+    <p></p>
+    <div class="row">
+            <div class="col-sm-2 col-sm-offset-1" style="text-align: center;">
+                <img src="{photo}" style="margin-top: 40px;">
+            </div>
+        <div class="col-sm-8">
+            <h3>{fullName}, {position};  {zh_name}</h3>
+            {#profile.en}
+            <p>{.}</p>
+            {/profile.en}
+            {#profile.zh}
+            <p>{.}</p>
+            {/profile.zh}
+        </div>
+
+    </div>
+    <p><br/><br/><br/></p>
+    {/persons}
+
+
+
+{/body}
+
+
+

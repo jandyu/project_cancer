@@ -81,7 +81,7 @@ router.get("/article/:id", function (req, res) {
 
     Promise.all([
             lifestar.ForumArticles.doPromise(lifestar.ForumArticles.queryDataByID, tid),
-            lifestar.ForumReplies.doPromise(lifestar.ForumReplies.queryDataWithOptions, {articleID: tid}, {sort: {timestamp: -1}}, "json"),
+            lifestar.ForumReplies.doPromise(lifestar.ForumReplies.queryDataWithOptions, {articleID: tid}, {sort: {timestamp: 1}}, "json"),
 
         ])
         .then(function (lst) {

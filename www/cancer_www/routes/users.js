@@ -169,6 +169,9 @@ router.post("/center", function (req, res) {
     logger.info(upt);
     lifestar.Users.updateData(uid,upt,function(){
 
+        req.session["user"] = {photo:upt.photo,username:rtn[0].account,userid: rtn[0]._id, fullname: rtn[0].fullname, role: rtn[0].role};
+
+
         var viewData = {layout: lifestar.resource.data.session(req.session.user)};
         viewData.info = '保存成功.'
         lifestar.Users.doPromise(lifestar.Users.queryDataByID, uid).then(function (users) {
