@@ -167,9 +167,11 @@ router.post("/center", function (req, res) {
     var uid = req.session.user.userid;
     var upt  = req.body;
     logger.info(upt);
-    lifestar.Users.updateData(uid,upt,function(){
+    lifestar.Users.updateData(uid,upt,function(rtn){
 
-        req.session["user"] = {photo:upt.photo,username:rtn[0].account,userid: rtn[0]._id, fullname: rtn[0].fullname, role: rtn[0].role};
+        req.session["user"].photo =upt.photo;
+        req.session["user"].fullname =upt.fullname;
+
 
 
         var viewData = {layout: lifestar.resource.data.session(req.session.user)};

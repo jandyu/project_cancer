@@ -62,10 +62,9 @@
             xhr.onload = function (rtn) {
                 console.info(rtn.target);
                 if (callback != null) {
-                    callback(rtn.target.responseText);
-                }
-                else{
-                    $("#currimg").attr("src",imgPrefix+d.url);
+                    if(rtn.target.responseText.substr(0,13)=='/uploads/head') {
+                        callback(rtn.target.responseText);
+                    }
                 }
             };
             xhr.send(form);

@@ -53,6 +53,7 @@
             //
             //}
             xhr.onload = function (rtn) {
+                console.info(rtn);
                 callback(rtn.target.responseText);
             };
             xhr.send(form);
